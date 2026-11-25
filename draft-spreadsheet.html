@@ -239,7 +239,7 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
 <script>
 (function () {
   // formula bar typing
-  var text = 'SORT(FILTER(assets, units>=100), risk_12mo, -1)', el = document.getElementById('fx'), i = 0;
+  var text = 'FIND(DISTRESS("multifamily"))', el = document.getElementById('fx'), i = 0;
   function render(s){ el.innerHTML = s.replace(/"([^"]*)"?/, '<span class="str">$&</span>').replace(/^(\w+)/, '<span class="fn">$1</span>'); }
   if (matchMedia('(prefers-reduced-motion:reduce)').matches) render(text);
   else (function tick(){ render(text.slice(0, i)); if (i++ < text.length) setTimeout(tick, 55); })();
