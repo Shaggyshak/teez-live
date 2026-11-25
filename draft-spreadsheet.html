@@ -86,6 +86,59 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
 
 .grp td{background:var(--gutter);font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--green);font-weight:600;padding:8px 12px}
 td.ft{width:30%;font-weight:600}
+
+/* features bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:30px}
+.tile{border:1px solid #C9CDD2;border-radius:4px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.t-find,.t-owner{grid-column:span 3}.t-alert,.t-reach,.t-decide{grid-column:span 2}
+.tile .vis{background:var(--gutter);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;padding:18px;border-bottom:1px solid #C9CDD2;min-height:206px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.tile .body{padding:16px 18px 18px;flex:1}
+.step{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--green);font-weight:700}
+.tile h3{font-size:18.5px;margin:4px 0 8px;letter-spacing:-.01em}
+.tile ul{list-style:none;color:var(--ink-2);font-size:15px;line-height:1.45}
+.tile li{padding-left:16px;position:relative;margin-bottom:5px}
+.tile li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:1px;background:var(--amber)}
+.tile .vis>div{background:#fff;border:1px solid #C9CDD2;border-radius:3px}
+.ask{padding:10px 12px;font-family:var(--mono);font-size:12.5px;color:var(--ink)}
+.ask .q{background:var(--green-soft);color:var(--green);padding:1px 6px;border-radius:2px;margin-right:6px;font-weight:700}
+.heatwrap{padding:10px}
+.heat{display:grid;grid-template-columns:repeat(8,1fr);gap:3px}
+.heat i{display:block;aspect-ratio:1.6/1;border-radius:2px}
+.legend{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-family:var(--mono);font-size:10.5px;color:var(--ink-3)}
+.legend .lg{display:flex;align-items:center;gap:3px}.legend .lg i{width:12px;height:8px;display:inline-block;border-radius:1px}
+.chain{padding:10px 12px;display:flex;flex-direction:column;gap:3px}
+.node{border:1px solid #C9CDD2;border-radius:3px;padding:6px 10px;font-weight:600;font-size:14px;background:#fff}
+.node small{display:block;font-weight:400;font-size:12px;color:var(--ink-3)}
+.node.hl{border-color:var(--green);background:var(--green-soft)}
+.arrow{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);padding-left:10px}
+.tile .vis>.contacts{display:flex;flex-direction:column;gap:0;border:none;background:transparent}
+.contacts span{display:flex;align-items:center;gap:8px;font-size:13px;background:#fff;border:1px solid #C9CDD2;border-radius:3px;padding:6px 10px;margin-top:6px}
+.contacts b{width:8px;height:8px;border-radius:50%;background:var(--green)}.contacts b.m{background:#E8A33D}
+.contacts em{margin-left:auto;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--ink-3)}
+.feed{padding:4px 0}
+.al{display:flex;gap:9px;padding:8px 12px;border-bottom:1px solid var(--grid);font-size:13.5px;line-height:1.35}
+.al:last-child{border-bottom:none}
+.al b{flex:none;width:9px;height:9px;border-radius:50%;margin-top:5px}.al b.r{background:var(--red)}.al b.a{background:#E8A33D}
+.al small{display:block;font-family:var(--mono);font-size:10.5px;color:var(--ink-3)}
+.tile .vis>.via{display:flex;gap:6px;border:none;background:transparent}
+.via span{font-family:var(--mono);font-size:11px;border:1px solid #C9CDD2;background:#fff;border-radius:3px;padding:2px 8px;color:var(--ink-2)}
+.call{display:flex;align-items:center;gap:10px;padding:10px 12px;font-size:13.5px}
+.call small{display:block;font-family:var(--mono);font-size:11px;color:var(--ink-3)}
+.ph{flex:none;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px}
+.wave{display:flex;align-items:center;gap:3px;height:48px;padding:0 12px}
+.wave i{display:block;width:4px;background:var(--green);border-radius:2px;opacity:.85;animation:wv 1.1s ease-in-out infinite}
+@keyframes wv{50%{transform:scaleY(.45)}}
+.tile .vis>.sent{border:none;background:transparent;font-size:13px;color:var(--green);padding:8px 12px;font-weight:600}
+.handoff{display:flex;justify-content:space-between;gap:8px;padding:9px 12px;font-size:13.5px;font-weight:600}
+.go2{font-family:var(--mono);font-size:12px;color:var(--green)}
+.mini{display:grid;grid-template-columns:repeat(3,1fr)}
+.mini div{padding:8px 10px;border-right:1px solid var(--grid)}.mini div:last-child{border-right:none}
+.mini small{display:block;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-3)}
+.mini b{font-family:var(--mono);font-size:16px}
+.tile .vis>.tag-ok{border:none;background:transparent;font-size:12.5px;color:var(--green);font-weight:600;padding:0 2px}
+@media (max-width:980px){.bento{grid-template-columns:1fr 1fr}.t-find,.t-owner{grid-column:span 2}.t-alert,.t-reach,.t-decide{grid-column:span 1}.t-decide{grid-column:span 2}}
+@media (max-width:640px){.bento{grid-template-columns:1fr}.t-find,.t-owner,.t-alert,.t-reach,.t-decide{grid-column:span 1}}
+@media (prefers-reduced-motion:reduce){.wave i{animation:none}}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:26px;border:1px solid #C9CDD2;border-radius:3px}
 .cell{padding:20px;border-right:1px solid var(--grid)}
 .cell:last-child{border-right:none}
@@ -179,38 +232,90 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
     </div></div>
 
     <div class="blk" id="features"><div class="wrap">
-      <h2>Everything you need to source a distressed deal.</h2>
-      <p class="lede">From the first signal to the first conversation with the owner, in one workbook.</p>
-      <div class="xl"><div class="scroll-x"><table style="min-width:680px">
-        <thead><tr><th>Feature</th><th>What it does</th></tr></thead>
-        <tbody>
-          <tr class="grp"><td colspan="2">Find</td></tr>
-          <tr><td class="ft">Distress search</td><td class="why">Filter by special servicing, loan delinquency, upcoming maturity, tax delinquency, code violations and foreclosure notices, alone or stacked together.</td></tr>
-          <tr><td class="ft">Plain-language search</td><td class="why">Ask for "200+ unit assets in Texas with loans maturing in the next 12 months" and get a list.</td></tr>
-          <tr><td class="ft">Predicted distress risk</td><td class="why">A 12-month risk estimate for every asset, with the top drivers behind it.</td></tr>
-          <tr><td class="ft">Map and heat maps</td><td class="why">Draw a radius or polygon, see distress concentrations by submarket, and drill into any asset.</td></tr>
-          <tr><td class="ft">Saved lists</td><td class="why">Save a search as a list that updates itself as new assets match.</td></tr>
+      <h2>From first signal to first conversation.</h2>
+      <p class="lede">Everything between spotting distress and talking to the owner, in one workbook.</p>
 
-          <tr class="grp"><td colspan="2">Know the owner</td></tr>
-          <tr><td class="ft">Owner and sponsor roll-ups</td><td class="why">See every property an owner or sponsor controls, resolved from the LLC to the people behind it.</td></tr>
-          <tr><td class="ft">Contacts with confidence</td><td class="why">Phones and emails for owners, with a confidence rating on each and do-not-call flags.</td></tr>
-          <tr><td class="ft">Lender and servicer contacts</td><td class="why">Who holds the loan, who services it, and who to call at the special servicer.</td></tr>
+      <div class="bento">
 
-          <tr class="grp"><td colspan="2">Stay ahead</td></tr>
-          <tr><td class="ft">Distress alerts</td><td class="why">Get notified when a loan moves to special servicing, a maturity falls inside your window, or a new filing appears. By email, push or webhook.</td></tr>
-          <tr><td class="ft">Maturity calendar</td><td class="why">See which loans come due by quarter in the markets you watch.</td></tr>
+        <article class="tile t-find">
+          <div class="vis">
+            <div class="ask"><span class="q">Ask</span> 200+ unit assets in Texas with loans maturing in the next 12 months</div>
+            <div class="heatwrap"><div class="heat"><i style="background:#F1F3F4"></i><i style="background:#FBEBCB"></i><i style="background:#F1F3F4"></i><i style="background:#F6D898"></i><i style="background:#FBEBCB"></i><i style="background:#F1F3F4"></i><i style="background:#F1F3F4"></i><i style="background:#FBEBCB"></i><i style="background:#FBEBCB"></i><i style="background:#F6D898"></i><i style="background:#F1B7AE"></i><i style="background:#E58A7B"></i><i style="background:#F6D898"></i><i style="background:#FBEBCB"></i><i style="background:#F1F3F4"></i><i style="background:#F1F3F4"></i><i style="background:#F1F3F4"></i><i style="background:#FBEBCB"></i><i style="background:#F1B7AE"></i><i style="background:#E58A7B"></i><i style="background:#F1B7AE"></i><i style="background:#F6D898"></i><i style="background:#FBEBCB"></i><i style="background:#F1F3F4"></i><i style="background:#F1F3F4"></i><i style="background:#F1F3F4"></i><i style="background:#FBEBCB"></i><i style="background:#F6D898"></i><i style="background:#F6D898"></i><i style="background:#FBEBCB"></i><i style="background:#F1F3F4"></i><i style="background:#FBEBCB"></i></div>
+              <div class="legend"><span>Distress by submarket</span><span class="lg"><i style="background:#F1F3F4"></i><i style="background:#F6D898"></i><i style="background:#F1B7AE"></i><i style="background:#E58A7B"></i> High</span></div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="step">01 · Find</div>
+            <h3>Search by distress, in plain language</h3>
+            <ul><li>Special servicing, delinquency, maturities, tax and code signals, stacked</li><li>A 12-month risk estimate with the top drivers</li><li>Map, radius and polygon search, and saved lists that refresh</li></ul>
+          </div>
+        </article>
 
-          <tr class="grp"><td colspan="2">Reach out</td></tr>
-          <tr><td class="ft">AI voice outreach</td><td class="why">Pick a list and approve the script. An AI voice places the call, leaves a voicemail, and follows up with your details by text or email.</td></tr>
-          <tr><td class="ft">Email, text and mail sequences</td><td class="why">Multi-step outreach to owners, with replies tracked in one inbox.</td></tr>
-          <tr><td class="ft">Activity log</td><td class="why">Every call, message and note against the asset, so nobody on the team repeats a touch.</td></tr>
+        <article class="tile t-owner">
+          <div class="vis">
+            <div class="chain">
+              <div class="node">Harbor Pointe Apartments LLC<small>Owner of record</small></div>
+              <div class="arrow">↑ owned by</div>
+              <div class="node">Lakeshore Holdings LP<small>Holding entity</small></div>
+              <div class="arrow">↑ controlled by</div>
+              <div class="node hl">Lakeshore Capital Partners<small>Sponsor · 7 properties · 1,420 units</small></div>
+            </div>
+            <div class="contacts"><span><b></b>Asset manager · phone<em>High confidence</em></span><span><b class="m"></b>Property manager · email<em>Medium</em></span></div>
+          </div>
+          <div class="body">
+            <div class="step">02 · Know the owner</div>
+            <h3>The LLC, the sponsor and who to call</h3>
+            <ul><li>Roll up every property an owner or sponsor controls</li><li>Contacts with a confidence rating and do-not-call flags</li><li>The lender and the special servicer, with contacts</li></ul>
+          </div>
+        </article>
 
-          <tr class="grp"><td colspan="2">Decide</td></tr>
-          <tr><td class="ft">One-click underwriting</td><td class="why">Send any asset to <a href="https://teez.ai" style="text-decoration:underline;text-underline-offset:3px">Teez</a> as a pre-filled model and see what you can pay.</td></tr>
-          <tr><td class="ft">Comps and property reports</td><td class="why">Sale comps, tax and transaction history, and loan details on one page per asset.</td></tr>
-          <tr><td class="ft">Export, API and integrations</td><td class="why">Send lists to Excel or your CRM, or pull them through the API or an MCP server.</td></tr>
-        </tbody>
-      </table></div></div>
+        <article class="tile t-alert">
+          <div class="vis">
+            <div class="feed">
+              <div class="al"><b class="r"></b><span><strong>Willowbrook Commons</strong> moved to special servicing<small>2 hours ago</small></span></div>
+              <div class="al"><b class="a"></b><span><strong>Harbor Pointe</strong> maturity now inside 12 months<small>Yesterday</small></span></div>
+              <div class="al"><b class="a"></b><span><strong>The Ridgeline</strong> new tax lien recorded<small>Nov 22</small></span></div>
+            </div>
+            <div class="via"><span>Email</span><span>Push</span><span>Webhook</span></div>
+          </div>
+          <div class="body">
+            <div class="step">03 · Stay ahead</div>
+            <h3>Know the day it changes</h3>
+            <ul><li>Alerts on servicing transfers, maturities and new filings</li><li>A maturity calendar by quarter for your markets</li></ul>
+          </div>
+        </article>
+
+        <article class="tile t-reach">
+          <div class="vis">
+            <div class="call"><span class="ph">☎</span><span><strong>AI voice · voicemail left</strong><small>Willowbrook Commons · 0:42</small></span></div>
+            <div class="wave"><i style="height:8px;animation-delay:0ms"></i><i style="height:14px;animation-delay:60ms"></i><i style="height:22px;animation-delay:120ms"></i><i style="height:12px;animation-delay:180ms"></i><i style="height:26px;animation-delay:240ms"></i><i style="height:18px;animation-delay:300ms"></i><i style="height:10px;animation-delay:360ms"></i><i style="height:24px;animation-delay:420ms"></i><i style="height:30px;animation-delay:480ms"></i><i style="height:16px;animation-delay:540ms"></i><i style="height:9px;animation-delay:600ms"></i><i style="height:20px;animation-delay:660ms"></i><i style="height:28px;animation-delay:720ms"></i><i style="height:14px;animation-delay:780ms"></i><i style="height:22px;animation-delay:840ms"></i><i style="height:10px;animation-delay:0ms"></i><i style="height:18px;animation-delay:60ms"></i><i style="height:26px;animation-delay:120ms"></i><i style="height:12px;animation-delay:180ms"></i><i style="height:8px;animation-delay:240ms"></i><i style="height:16px;animation-delay:300ms"></i><i style="height:22px;animation-delay:360ms"></i><i style="height:10px;animation-delay:420ms"></i><i style="height:6px;animation-delay:480ms"></i></div>
+            <div class="sent">✓ Follow-up text sent with your details</div>
+          </div>
+          <div class="body">
+            <div class="step">04 · Reach out</div>
+            <h3>Start the conversation</h3>
+            <ul><li>AI voice calls and voicemails from a list and script you approve</li><li>Email, text and mail sequences</li><li>One activity log for the whole team</li></ul>
+          </div>
+        </article>
+
+        <article class="tile t-decide">
+          <div class="vis">
+            <div class="handoff"><span>Willowbrook Commons</span><span class="go2">Underwrite →</span></div>
+            <div class="mini">
+              <div><small>Max bid</small><b>$31.2M</b></div>
+              <div><small>Levered IRR</small><b>17.4%</b></div>
+              <div><small>Going-in cap</small><b>6.8%</b></div>
+            </div>
+            <div class="tag-ok">Opened in Teez · pre-filled from the asset</div>
+          </div>
+          <div class="body">
+            <div class="step">05 · Decide</div>
+            <h3>From lead to priced bid</h3>
+            <ul><li>One-click underwriting in <a href="https://teez.ai" style="text-decoration:underline;text-underline-offset:3px">Teez</a></li><li>Comps, tax and loan history on one page per asset</li><li>Export to Excel or your CRM, plus an API and MCP server</li></ul>
+          </div>
+        </article>
+
+      </div>
     </div></div>
 
     <div class="blk" id="signals"><div class="wrap">
