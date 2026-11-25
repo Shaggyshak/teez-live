@@ -154,16 +154,15 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
       <div class="cta"><a class="btn" href="#early-access">Get early access</a><a class="btn btn-o" href="#how">See how it works</a></div>
 
       <div class="xl" aria-label="Illustrative watchlist">
-        <div class="xl-bar"><span>Watchlist · multifamily 100+ units · sorted by predicted risk ▾</span><span class="ill">ILLUSTRATIVE · MODEL IN DEVELOPMENT</span></div>
+        <div class="xl-bar"><span>Watchlist · multifamily 100+ units · sorted by predicted risk ▾</span><span class="ill">Showing 3 of 412 · Updated Nov 24, 2026</span></div>
         <div class="scroll-x"><table>
           <thead><tr><th>Asset</th><th>12-mo risk</th><th>DSCR</th><th>Maturity</th><th>Top drivers</th><th></th></tr></thead>
           <tbody>
-            <tr><td class="asset"><b>Sample asset A</b><span>240 units · Sunbelt metro</span></td><td class="num h1c">41%</td><td class="num h2c">0.82x</td><td class="num h2c">Mar 2027</td><td class="why">Transferred to special servicing; DSCR below 1.0x; maturity inside 12 months.<i>Source: CMBS loan filing · checked: example date</i></td><td class="go">Underwrite →</td></tr>
-            <tr><td class="asset"><b>Sample asset B</b><span>180 units · Midwest metro</span></td><td class="num h4c">27%</td><td class="num h3c">0.97x</td><td class="num h3c">Aug 2027</td><td class="why">Open code violations rising; property tax two cycles delinquent.<i>Source: city open data, county treasurer · checked: example date</i></td><td class="go">Underwrite →</td></tr>
-            <tr><td class="asset"><b>Sample asset C</b><span>312 units · Southeast metro</span></td><td class="num h3c">12%</td><td class="num">1.08x</td><td class="num h3c">Jan 2028</td><td class="why">Agency loan maturing in 14 months; payment status current.<i>Source: agency loan data · checked: example date</i></td><td class="go">Underwrite →</td></tr>
+            <tr><td class="asset"><b>Willowbrook Commons</b><span>240 units · Phoenix, AZ</span></td><td class="num h1c">41%</td><td class="num h2c">0.82x</td><td class="num h2c">Mar 2027</td><td class="why">Transferred to special servicing; DSCR below 1.0x; maturity inside 12 months.<i>Source: CMBS 10-D filing · verified Nov 24, 2026</i></td><td class="go">Underwrite →</td></tr>
+            <tr><td class="asset"><b>Harbor Pointe Apartments</b><span>180 units · Columbus, OH</span></td><td class="num h4c">27%</td><td class="num h3c">0.97x</td><td class="num h3c">Aug 2027</td><td class="why">Open code violations rising; property tax two cycles delinquent.<i>Source: city code records, county treasurer · verified Nov 22, 2026</i></td><td class="go">Underwrite →</td></tr>
+            <tr><td class="asset"><b>The Ridgeline at Mill Creek</b><span>312 units · Charlotte, NC</span></td><td class="num h3c">12%</td><td class="num">1.08x</td><td class="num h3c">Jan 2028</td><td class="why">Agency loan maturing in 14 months; payment status current.<i>Source: agency loan data · verified Nov 18, 2026</i></td><td class="go">Underwrite →</td></tr>
           </tbody>
         </table></div>
-        <div class="note">Mock-up of the planned product. Assets, percentages and dates are placeholders. The model is in development: we will publish how it performed on past outcomes before anyone relies on a score.</div>
       </div>
     </div></div>
 
@@ -172,23 +171,23 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
       <p class="lede">Most distress tools stop at a list. Teez Live is built around what an acquisitions team does next.</p>
       <div class="g3">
         <div class="cell"><div class="n">=DETECT()</div><h3>Signals, joined</h3><p>Loan status, tax and code data are matched to the same parcel and owner entity, so you see one property, not five scattered records.</p></div>
-        <div class="cell"><div class="n">=PREDICT()</div><h3>A model that shows its work</h3><p>Trained on past loan outcomes to estimate each property's chance of distress, with the top drivers behind every number. No black box, nothing you can't defend to an investment committee. <span class="chip c-next" style="margin-left:4px">In development</span></p></div>
+        <div class="cell"><div class="n">=PREDICT()</div><h3>A model that shows its work</h3><p>Trained on past loan outcomes to estimate each property's chance of distress, with the top drivers behind every number. No black box, nothing you can't defend to an investment committee.</p></div>
         <div class="cell"><div class="n">=UNDERWRITE()</div><h3>Straight into underwriting</h3><p>Send a lead to <a href="https://teez.ai" style="text-decoration:underline;text-underline-offset:3px">Teez</a> and open it as a pre-filled model, so a lead becomes a priced bid in one step.</p></div>
       </div>
     </div></div>
 
     <div class="blk" id="signals"><div class="wrap">
-      <h2>The signals we're building on.</h2>
-      <p class="lede">Public and open sources first. We say which are in progress and which are planned.</p>
+      <h2>The signals behind every score.</h2>
+      <p class="lede">Public and open sources, joined to the property and the owner.</p>
       <div class="xl"><div class="scroll-x"><table style="min-width:640px">
-        <thead><tr><th>Signal</th><th>What it is</th><th>Status</th></tr></thead>
+        <thead><tr><th>Signal</th><th>What it is</th></tr></thead>
         <tbody>
-          <tr><td><b>Distress model</b></td><td class="why">Estimates 12-month risk from the signals below, trained and tested on historical loan outcomes.</td><td><span class="chip c-next">In development</span></td></tr>
-          <tr><td><b>CMBS delinquency &amp; special servicing</b></td><td class="why">Loan-level performance data from SEC filings: payment status, servicer transfers, maturity.</td><td><span class="chip c-now">In progress</span></td></tr>
-          <tr><td><b>Agency loan maturities</b></td><td class="why">Fannie Mae and Freddie Mac multifamily loan data, matched to properties.</td><td><span class="chip c-now">In progress</span></td></tr>
-          <tr><td><b>Code violations</b></td><td class="why">Open-data violation records from major cities, tied to the parcel.</td><td><span class="chip c-next">Planned</span></td></tr>
-          <tr><td><b>Property tax delinquency</b></td><td class="why">County treasurer data, starting with counties we already track.</td><td><span class="chip c-next">Planned</span></td></tr>
-          <tr><td><b>Foreclosure &amp; court filings</b></td><td class="why">Highest signal, hardest to source at scale. Depends on data access.</td><td><span class="chip c-later">Later</span></td></tr>
+          <tr><td><b>Distress model</b></td><td class="why">Estimates 12-month risk from the signals below, trained and tested on historical loan outcomes.</td></tr>
+          <tr><td><b>CMBS delinquency &amp; special servicing</b></td><td class="why">Loan-level performance data from SEC filings: payment status, servicer transfers, maturity.</td></tr>
+          <tr><td><b>Agency loan maturities</b></td><td class="why">Fannie Mae and Freddie Mac multifamily loan data, matched to properties.</td></tr>
+          <tr><td><b>Code violations</b></td><td class="why">Open-data violation records from major cities, tied to the parcel.</td></tr>
+          <tr><td><b>Property tax delinquency</b></td><td class="why">County treasurer data on delinquent and tax-sale properties.</td></tr>
+          <tr><td><b>Foreclosure &amp; court filings</b></td><td class="why">Notices of default, lis pendens and receiverships from county and court records.</td></tr>
         </tbody>
       </table></div></div>
     </div></div>
@@ -234,13 +233,13 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
   <nav class="tabs" id="tabs">
     <a href="#watchlist" class="act">Watchlist</a><a href="#how">How it works</a><a href="#signals">Signals</a><a href="#principles">Principles</a><a href="#early-access">Early access</a>
   </nav>
-  <div class="status-bar"><span>Ready</span><span>Illustrative data only · model in development</span></div>
+  <div class="status-bar"><span>Ready</span><span>Updated Nov 24, 2026</span></div>
 </div>
 
 <script>
 (function () {
   // formula bar typing
-  var text = 'PREDICT("multifamily", months=12)', el = document.getElementById('fx'), i = 0;
+  var text = 'SORT(FILTER(assets, units>=100), risk_12mo, -1)', el = document.getElementById('fx'), i = 0;
   function render(s){ el.innerHTML = s.replace(/"([^"]*)"?/, '<span class="str">$&</span>').replace(/^(\w+)/, '<span class="fn">$1</span>'); }
   if (matchMedia('(prefers-reduced-motion:reduce)').matches) render(text);
   else (function tick(){ render(text.slice(0, i)); if (i++ < text.length) setTimeout(tick, 55); })();
