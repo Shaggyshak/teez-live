@@ -84,6 +84,8 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
 .go{font-family:var(--mono);font-size:12.5px;color:var(--green);font-weight:600;white-space:nowrap}
 .note{padding:9px 12px;font-size:13px;color:var(--ink-3);background:var(--gutter);border-top:1px solid #C9CDD2}
 
+.grp td{background:var(--gutter);font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--green);font-weight:600;padding:8px 12px}
+td.ft{width:30%;font-weight:600}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:26px;border:1px solid #C9CDD2;border-radius:3px}
 .cell{padding:20px;border-right:1px solid var(--grid)}
 .cell:last-child{border-right:none}
@@ -176,6 +178,41 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
       </div>
     </div></div>
 
+    <div class="blk" id="features"><div class="wrap">
+      <h2>Everything you need to source a distressed deal.</h2>
+      <p class="lede">From the first signal to the first conversation with the owner, in one workbook.</p>
+      <div class="xl"><div class="scroll-x"><table style="min-width:680px">
+        <thead><tr><th>Feature</th><th>What it does</th></tr></thead>
+        <tbody>
+          <tr class="grp"><td colspan="2">Find</td></tr>
+          <tr><td class="ft">Distress search</td><td class="why">Filter by special servicing, loan delinquency, upcoming maturity, tax delinquency, code violations and foreclosure notices, alone or stacked together.</td></tr>
+          <tr><td class="ft">Plain-language search</td><td class="why">Ask for "200+ unit assets in Texas with loans maturing in the next 12 months" and get a list.</td></tr>
+          <tr><td class="ft">Predicted distress risk</td><td class="why">A 12-month risk estimate for every asset, with the top drivers behind it.</td></tr>
+          <tr><td class="ft">Map and heat maps</td><td class="why">Draw a radius or polygon, see distress concentrations by submarket, and drill into any asset.</td></tr>
+          <tr><td class="ft">Saved lists</td><td class="why">Save a search as a list that updates itself as new assets match.</td></tr>
+
+          <tr class="grp"><td colspan="2">Know the owner</td></tr>
+          <tr><td class="ft">Owner and sponsor roll-ups</td><td class="why">See every property an owner or sponsor controls, resolved from the LLC to the people behind it.</td></tr>
+          <tr><td class="ft">Contacts with confidence</td><td class="why">Phones and emails for owners, with a confidence rating on each and do-not-call flags.</td></tr>
+          <tr><td class="ft">Lender and servicer contacts</td><td class="why">Who holds the loan, who services it, and who to call at the special servicer.</td></tr>
+
+          <tr class="grp"><td colspan="2">Stay ahead</td></tr>
+          <tr><td class="ft">Distress alerts</td><td class="why">Get notified when a loan moves to special servicing, a maturity falls inside your window, or a new filing appears. By email, push or webhook.</td></tr>
+          <tr><td class="ft">Maturity calendar</td><td class="why">See which loans come due by quarter in the markets you watch.</td></tr>
+
+          <tr class="grp"><td colspan="2">Reach out</td></tr>
+          <tr><td class="ft">AI voice outreach</td><td class="why">Pick a list and approve the script. An AI voice places the call, leaves a voicemail, and follows up with your details by text or email.</td></tr>
+          <tr><td class="ft">Email, text and mail sequences</td><td class="why">Multi-step outreach to owners, with replies tracked in one inbox.</td></tr>
+          <tr><td class="ft">Activity log</td><td class="why">Every call, message and note against the asset, so nobody on the team repeats a touch.</td></tr>
+
+          <tr class="grp"><td colspan="2">Decide</td></tr>
+          <tr><td class="ft">One-click underwriting</td><td class="why">Send any asset to <a href="https://teez.ai" style="text-decoration:underline;text-underline-offset:3px">Teez</a> as a pre-filled model and see what you can pay.</td></tr>
+          <tr><td class="ft">Comps and property reports</td><td class="why">Sale comps, tax and transaction history, and loan details on one page per asset.</td></tr>
+          <tr><td class="ft">Export, API and integrations</td><td class="why">Send lists to Excel or your CRM, or pull them through the API or an MCP server.</td></tr>
+        </tbody>
+      </table></div></div>
+    </div></div>
+
     <div class="blk" id="signals"><div class="wrap">
       <h2>The signals behind every score.</h2>
       <p class="lede">Public and open sources, joined to the property and the owner.</p>
@@ -231,7 +268,7 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
 
 <div class="bottom">
   <nav class="tabs" id="tabs">
-    <a href="#watchlist" class="act">Watchlist</a><a href="#how">How it works</a><a href="#signals">Signals</a><a href="#principles">Principles</a><a href="#early-access">Early access</a>
+    <a href="#watchlist" class="act">Watchlist</a><a href="#how">How it works</a><a href="#features">Features</a><a href="#signals">Signals</a><a href="#principles">Principles</a><a href="#early-access">Early access</a>
   </nav>
   <div class="status-bar"><span>Ready</span><span>Updated Nov 24, 2026</span></div>
 </div>
