@@ -26,8 +26,8 @@ a{color:inherit;text-decoration:none}
 /* chrome */
 .app{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--chrome);color:#E8EAED;border-bottom:1px solid var(--chrome-line)}
 .app-top{display:flex;align-items:center;gap:16px;height:52px;padding:0 16px}
-.nm{font-weight:700;font-size:17px;display:flex;align-items:center;gap:9px}
-.pip{width:9px;height:9px;border-radius:50%;background:#E8A33D}
+.nm{font-weight:700;font-size:17px;letter-spacing:-.01em;display:flex;align-items:center;gap:11px;flex:none}
+.nm img{height:24px;width:24px;object-fit:contain}
 .file{font-family:var(--mono);font-size:12px;color:#9AA0A6;border-left:1px solid var(--chrome-line);padding-left:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .app-right{margin-left:auto;display:flex;align-items:center;gap:16px;font-size:14px;color:#B9BEC4}
 .app-right a:hover{color:#fff}
@@ -190,7 +190,7 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
 
 <header class="app">
   <div class="app-top">
-    <span class="nm"><span class="pip"></span>Teez Live</span>
+    <a href="#top" class="nm"><img src="teez-icon.png" alt="Teez">Teez Live</a>
     <span class="file">distress-watchlist.xlsx</span>
     <div class="app-right">
       <a class="hm" href="https://teez.ai">Underwriting →</a>
