@@ -87,148 +87,88 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
 .grp td{background:var(--gutter);font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--green);font-weight:600;padding:8px 12px}
 td.ft{width:30%;font-weight:600}
 
-/* features bento */
-.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:30px}
-.tile{border:1px solid #C9CDD2;border-radius:4px;background:#fff;overflow:hidden;display:flex;flex-direction:column}
-.t-find,.t-owner{grid-column:span 3}.t-alert,.t-reach,.t-decide{grid-column:span 2}
-.tile .vis{background:var(--gutter);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;padding:18px;border-bottom:1px solid #C9CDD2;min-height:206px;display:flex;flex-direction:column;justify-content:center;gap:12px}
-.tile .body{padding:16px 18px 18px;flex:1}
-.step{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--green);font-weight:700}
-.tile h3{font-size:18.5px;margin:4px 0 8px;letter-spacing:-.01em}
-.tile ul{list-style:none;color:var(--ink-2);font-size:15px;line-height:1.45}
-.tile li{padding-left:16px;position:relative;margin-bottom:5px}
-.tile li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:1px;background:var(--amber)}
-.tile .vis>div{background:#fff;border:1px solid #C9CDD2;border-radius:3px}
-.ask{padding:10px 12px;font-family:var(--mono);font-size:12.5px;color:var(--ink)}
-.ask .q{background:var(--green-soft);color:var(--green);padding:1px 6px;border-radius:2px;margin-right:6px;font-weight:700}
-.heatwrap{padding:10px}
-.heat{display:grid;grid-template-columns:repeat(8,1fr);gap:3px}
-.heat i{display:block;aspect-ratio:1.6/1;border-radius:2px}
-.mapbox{padding:2px 0 0}
 .usmap{display:block;width:100%;height:auto}
-.mlab{font-family:ui-monospace,'JetBrains Mono',Menlo,monospace;font-size:10.5px;fill:#1F2329;font-weight:600;paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
+.mlab{font-family:ui-monospace,'JetBrains Mono',Menlo,monospace;font-size:17px;fill:#1F2329;font-weight:600;paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
 .pulse{transform-box:fill-box;transform-origin:center;animation:pl 2.2s ease-out infinite}
 @keyframes pl{0%{transform:scale(.8);opacity:.9}100%{transform:scale(2.2);opacity:0}}
-@media (prefers-reduced-motion:reduce){.pulse{animation:none}}
-.legend{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-family:var(--mono);font-size:10.5px;color:var(--ink-3)}
-.legend .lg{display:flex;align-items:center;gap:3px}.legend .lg i{width:12px;height:8px;display:inline-block;border-radius:1px}
-.chain{padding:10px 12px;display:flex;flex-direction:column;gap:3px}
-.node{border:1px solid #C9CDD2;border-radius:3px;padding:6px 10px;font-weight:600;font-size:14px;background:#fff}
-.node small{display:block;font-weight:400;font-size:12px;color:var(--ink-3)}
-.node.hl{border-color:var(--green);background:var(--green-soft)}
-.arrow{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);padding-left:10px}
-.tile .vis>.contacts{display:flex;flex-direction:column;gap:0;border:none;background:transparent}
-.contacts span{display:flex;align-items:center;gap:8px;font-size:13px;background:#fff;border:1px solid #C9CDD2;border-radius:3px;padding:6px 10px;margin-top:6px}
-.contacts b{width:8px;height:8px;border-radius:50%;background:var(--green)}.contacts b.m{background:#E8A33D}
-.contacts em{margin-left:auto;font-style:normal;font-family:var(--mono);font-size:11px;color:var(--ink-3)}
-.feed{padding:4px 0}
-.al{display:flex;gap:9px;padding:8px 12px;border-bottom:1px solid var(--grid);font-size:13.5px;line-height:1.35}
-.al:last-child{border-bottom:none}
-.al b{flex:none;width:9px;height:9px;border-radius:50%;margin-top:5px}.al b.r{background:var(--red)}.al b.a{background:#E8A33D}
-.al small{display:block;font-family:var(--mono);font-size:10.5px;color:var(--ink-3)}
-.tile .vis>.via{display:flex;gap:6px;border:none;background:transparent}
-.via span{font-family:var(--mono);font-size:11px;border:1px solid #C9CDD2;background:#fff;border-radius:3px;padding:2px 8px;color:var(--ink-2)}
-.call{display:flex;align-items:center;gap:10px;padding:10px 12px;font-size:13.5px}
-.call small{display:block;font-family:var(--mono);font-size:11px;color:var(--ink-3)}
-.ph{flex:none;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px}
-.wave{display:flex;align-items:center;gap:3px;height:48px;padding:0 12px}
-.wave i{display:block;width:4px;background:var(--green);border-radius:2px;opacity:.85;animation:wv 1.1s ease-in-out infinite}
-@keyframes wv{50%{transform:scaleY(.45)}}
-.tile .vis>.sent{border:none;background:transparent;font-size:13px;color:var(--green);padding:8px 12px;font-weight:600}
-.handoff{display:flex;justify-content:space-between;gap:8px;padding:9px 12px;font-size:13.5px;font-weight:600}
-.go2{font-family:var(--mono);font-size:12px;color:var(--green)}
-.mini{display:grid;grid-template-columns:repeat(3,1fr)}
-.mini div{padding:8px 10px;border-right:1px solid var(--grid)}.mini div:last-child{border-right:none}
-.mini small{display:block;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-3)}
-.mini b{font-family:var(--mono);font-size:16px}
-.tile .vis>.tag-ok{border:none;background:transparent;font-size:12.5px;color:var(--green);font-weight:600;padding:0 2px}
-@media (max-width:980px){.bento{grid-template-columns:1fr 1fr}.t-find,.t-owner{grid-column:span 2}.t-alert,.t-reach,.t-decide{grid-column:span 1}.t-decide{grid-column:span 2}}
-@media (max-width:640px){.bento{grid-template-columns:1fr}.t-find,.t-owner,.t-alert,.t-reach,.t-decide{grid-column:span 1}}
-@media (prefers-reduced-motion:reduce){.wave i{animation:none}}
-
-/* hero agent */
+/* hero stage */
+#agent{padding-top:20px}
 .hero-c{text-align:center}
-.hero-c h1,.hero-c .sub{margin-left:auto;margin-right:auto}
-.hero-c .cta{justify-content:center}
-.agent{margin:34px auto 0;max-width:760px;text-align:left;background:#15191D;color:#E8EAED;border:1px solid #2C3238;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px -24px rgba(16,124,65,.45),0 0 0 6px rgba(16,124,65,.07)}
-.ag-top{display:flex;align-items:center;gap:9px;padding:11px 16px;border-bottom:1px solid #2C3238;font-weight:700;font-size:15px}
-.ag-top img{width:20px;height:20px}
-.ag-on{margin-left:auto;font-family:var(--mono);font-size:11px;color:#5BD18B;font-weight:400}
-.ag-on::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#5BD18B;margin-right:6px}
-.ag-log{height:372px;padding:16px;overflow:hidden}
-.msg{margin-left:auto;width:fit-content;max-width:85%;background:#107C41;color:#fff;padding:9px 13px;border-radius:12px 12px 3px 12px;font-size:15px}
-.ag-steps{list-style:none;margin:12px 0;font-family:var(--mono);font-size:12.5px;color:#9AA0A6}
-.ag-steps li{display:flex;align-items:center;gap:9px;padding:2px 0}
-.ag-steps li::before{content:"";flex:none;width:11px;height:11px;border-radius:50%;border:2px solid #3A4249;border-top-color:#5BD18B;animation:spin .7s linear infinite}
-.ag-steps li.done::before{content:"✓";border:none;animation:none;color:#5BD18B;font-size:12px;line-height:11px}
-@keyframes spin{to{transform:rotate(360deg)}}
-.deal{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#1E2429;border:1px solid #2C3238;border-radius:8px;padding:8px 12px;margin-bottom:6px}
-.deal b{display:block;font-size:14.5px}
-.deal small{display:block;font-family:var(--mono);font-size:11px;color:#9AA0A6}
-.deal em{font-style:normal;font-family:var(--mono);font-weight:700;font-size:15px;border-radius:5px;padding:3px 8px}
-.r1{background:rgba(229,96,77,.18);color:#F08A78}.r2{background:rgba(232,163,61,.18);color:#EDB25C}.r3{background:rgba(242,203,130,.14);color:#F2CB82}
-.reply{font-size:14.5px;color:#C7CCD2;margin-top:10px}
-.agent .hide{display:none}
-.agent .pop{animation:pop .35s ease-out both}
-@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.ag-input{display:flex;align-items:center;gap:10px;border-top:1px solid #2C3238;padding:12px 14px}
-.ag-text{flex:1;min-height:46px;display:flex;align-items:center;flex-wrap:wrap;background:#0F1214;border:1px solid #2C3238;border-radius:10px;padding:8px 13px;font-size:15px;line-height:1.35}
-.ag-text .caret{margin-left:2px}
-.hint{color:#6F777E;margin-left:6px}
-.ag-text.typing-on .hint{display:none}
-.send{flex:none;width:40px;height:40px;border-radius:10px;background:#107C41;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;transition:transform .15s,background .15s}
-.send.press{transform:scale(.86);background:#1a9551}
-
-#agent{padding-top:18px}
-.hero-c h1{max-width:none;font-size:clamp(32px,3.6vw,46px)}
+.hero-c h1{max-width:none;margin:0 auto;font-size:clamp(32px,3.8vw,48px)}
 .hero-c .cellhdr{margin-bottom:8px}
-.hero-c .agent{margin-top:18px}
-.hero-c .sub{margin-top:26px}
-.agent .ag-log{height:358px;padding:12px 16px}
-.agent .ag-steps{margin:8px 0}
-.agent .deal{padding:5px 12px;margin-bottom:5px}
-.agent .deal b{line-height:1.3}
-.agent .reply{margin-top:6px}
-.agent .ag-input{padding:9px 14px}
-@media (max-width:820px){.agent .ag-log{height:462px}}
+.hero-c .sub{margin:30px auto 0}
+.hero-c .cta{justify-content:center}
+.stage{margin-top:22px;text-align:left;border:1px solid #D5D9DE;border-radius:12px;background:#fff;overflow:hidden;box-shadow:0 18px 44px -30px rgba(31,35,41,.35)}
+.steps{display:grid;grid-template-columns:repeat(6,1fr);border-bottom:1px solid var(--grid)}
+.steps button{position:relative;border:0;background:none;font:600 13.5px var(--sans);color:var(--ink-3);padding:13px 4px;cursor:pointer}
+.steps button.on{color:var(--ink)}
+.steps button i{position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--green)}
+.steps button.on i{animation:fill var(--t,5s) linear forwards}
+@keyframes fill{to{width:100%}}
+.screen{position:relative;height:420px;background:#FBFBFC}
+.scene{position:absolute;inset:0;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:32px;align-items:center;padding:26px 36px;opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s}
+.scene.on{opacity:1;visibility:visible}
+.scene.on .in{animation:rise .6s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d)}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+.cap h3{font-size:24px;letter-spacing:-.015em;line-height:1.2;margin-bottom:8px}
+.cap p{color:var(--ink-2);font-size:16px}
+.s-ask{display:flex;justify-content:center;align-items:center}
+.askwrap{width:100%;max-width:640px;text-align:center}
+.askwrap .q{font-size:24px;font-weight:700;margin-bottom:18px;letter-spacing:-.015em}
+.prompt{display:flex;align-items:center;gap:12px;text-align:left;background:#fff;border:1px solid #D5D9DE;border-radius:14px;padding:12px 12px 12px 18px;box-shadow:0 10px 30px -22px rgba(31,35,41,.5);font-size:17px;min-height:76px}
+.prompt>span{flex:1}
+.prompt b{flex:none;width:38px;height:38px;border-radius:10px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;transition:transform .15s}
+.prompt b.press{transform:scale(.88)}
+.split{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:14px;align-items:center}
+.card{background:#fff;border:1px solid var(--grid);border-radius:10px;padding:10px}
+.list{display:flex;flex-direction:column;gap:8px;min-width:0}
+.list.wide{max-width:520px;width:100%;margin:0 auto}
+.row{display:flex;align-items:center;gap:11px;background:#fff;border:1px solid var(--grid);border-radius:10px;padding:11px 14px}
+.row span{flex:1;min-width:0}
+.row b{display:block;font-size:14.5px;line-height:1.3}
+.row small{display:block;font-size:12.5px;color:var(--ink-3);line-height:1.35}
+.row time,.row em{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+.row em{font-weight:700;font-size:13.5px}
+.row em.r1{color:var(--red)}.row em.r2,.row em.r3{color:var(--amber)}
+.d{flex:none;width:8px;height:8px;border-radius:50%}.d.red{background:var(--red)}.d.amb{background:#E8A33D}.d.grn{background:var(--green)}
+.chain{display:flex;flex-direction:column;align-items:center}
+.node{width:100%;max-width:340px;text-align:center;background:#fff;border:1px solid var(--grid);border-radius:10px;padding:9px 14px;font-weight:700;font-size:14.5px}
+.node small{display:block;font-weight:400;font-size:12.5px;color:var(--ink-3)}
+.node.key{border-color:var(--green)}
+.link{width:1px;height:18px;background:#C9CDD2}
+.who{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.who span{font-size:12.5px;background:#fff;border:1px solid var(--grid);border-radius:99px;padding:5px 12px}
+.who em{font-style:normal;color:var(--green);font-weight:700;margin-left:6px}
+.wave{display:flex;align-items:center;justify-content:center;gap:4px;height:60px}
+.wave i{width:3px;border-radius:2px;background:var(--green);opacity:.75}
+.scene.on .wave i{animation:wv 1.1s ease-in-out infinite}
+@keyframes wv{50%{transform:scaleY(.4)}}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.nums div{background:#fff;border:1px solid var(--grid);border-radius:10px;padding:16px 12px;text-align:center}
+.nums small{display:block;font-size:12px;color:var(--ink-3)}
+.nums b{font-family:var(--mono);font-size:22px}
 
-/* animated how-it-works */
-.flow{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
-.rail{position:absolute;left:12.5%;right:12.5%;top:15px;height:3px;background:var(--grid);border-radius:2px}
-.rail i{display:block;height:100%;width:0;background:var(--green);border-radius:2px;transition:width .6s ease}
-.fs{position:relative;text-align:center;opacity:.45;transition:opacity .4s}
-.fs.on,.fs.past{opacity:1}
-.dot{position:relative;z-index:1;width:33px;height:33px;margin:0 auto 14px;border-radius:50%;background:#fff;border:2px solid #C9CDD2;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:13px;color:var(--ink-3);transition:.3s}
-.fs.on .dot,.fs.past .dot{background:var(--green);border-color:var(--green);color:#fff}
-.fs.on .dot{box-shadow:0 0 0 7px var(--green-soft)}
-.fv{position:relative;height:150px;border:1px solid #C9CDD2;border-radius:10px;background:var(--gutter);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:12px;margin-bottom:12px;overflow:hidden;transition:border-color .3s,box-shadow .3s,transform .3s}
-.fs.on .fv{border-color:var(--green);box-shadow:0 14px 30px -16px rgba(16,124,65,.55);transform:translateY(-4px)}
-.fs h3{font-size:19px;margin-bottom:4px}
-.fs p{color:var(--ink-2);font-size:15.5px}
-.fs p a{text-decoration:underline;text-underline-offset:3px}
-.bubble{background:var(--green);color:#fff;border-radius:11px 11px 3px 11px;padding:7px 11px;font-size:13.5px}
-.typing{display:flex;gap:4px;align-self:flex-start;background:#fff;border:1px solid #C9CDD2;border-radius:11px;padding:8px 10px}
-.typing i{width:6px;height:6px;border-radius:50%;background:var(--ink-3)}
-.fs.on .typing i{animation:bob .9s infinite}.fs.on .typing i:nth-child(2){animation-delay:.15s}.fs.on .typing i:nth-child(3){animation-delay:.3s}
-@keyframes bob{40%{transform:translateY(-5px)}}
-.chipx,.core,.pill{font-family:var(--mono);font-size:11.5px;border-radius:5px;padding:3px 9px;background:#fff;border:1px solid #C9CDD2}
-.core{background:var(--green);color:#fff;border-color:var(--green);margin-top:6px}
-.fs.on .c1{animation:in-l .6s both}.fs.on .c2{animation:in-r .6s .15s both}.fs.on .c3{animation:in-l .6s .3s both}.fs.on .core{animation:pop .4s .75s both}
-@keyframes in-l{from{opacity:0;transform:translateX(-60px)}}
-@keyframes in-r{from{opacity:0;transform:translateX(60px)}}
-.big{font-family:var(--mono);font-weight:700;font-size:26px}
-.v-score .big{color:var(--red)}
-.lbl{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3)}
-.bar{width:80%;height:6px;background:#fff;border-radius:3px;overflow:hidden}
-.bar i{display:block;height:100%;width:var(--w);background:#E58A7B;border-radius:3px}
-.fs.on .bar i{animation:grow .8s ease-out both}
-@keyframes grow{from{width:0}}
-.pill{background:var(--green);color:#fff;border-color:var(--green)}
-.pill.alt{background:#fff;color:var(--green)}
-.fs.on .v-bid .big,.fs.on .pill{animation:pop .45s both}.fs.on .pill{animation-delay:.35s}.fs.on .pill.alt{animation-delay:.6s}
-
-@media (max-width:820px){.flow{grid-template-columns:1fr;gap:26px}.rail{display:none}.ag-log{height:430px}.deal small{font-size:10.5px}}
-@media (prefers-reduced-motion:reduce){.fs{opacity:1}.agent .pop,.fs *{animation:none!important}}
+/* icon rows */
+.blk.soft{background:#F7F8F9}
+.blk h2{text-align:center}
+.blk .lede{text-align:center;margin-left:auto;margin-right:auto}
+.icons{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px;margin-top:40px;text-align:center}
+.ic{width:72px;height:72px;margin:0 auto 16px;border-radius:50%;background:var(--green-soft);display:flex;align-items:center;justify-content:center}
+.ic svg{width:34px;height:34px;fill:none;stroke:var(--green);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.it h3{font-size:16.5px;line-height:1.3;margin-bottom:6px}
+.it p{color:var(--ink-2);font-size:14.5px;line-height:1.45}
+@media (max-width:980px){.icons{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.icons{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}}
+@media (max-width:820px){
+  .screen{height:580px}
+  .scene{grid-template-columns:minmax(0,1fr);grid-template-rows:auto 1fr;gap:14px;padding:18px 14px}
+  .cap h3{font-size:20px}.cap p{font-size:14.5px}
+  .split{grid-template-columns:minmax(0,1fr);gap:8px}
+  .split .row{padding:7px 12px}
+  .steps button{font-size:11px;padding:11px 0}
+  .nums b{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){.scene.on .in,.wave i,.pulse,.steps button.on i{animation:none!important}.steps button.on i{width:100%}}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:26px;border:1px solid #C9CDD2;border-radius:3px}
 .cell{padding:20px;border-right:1px solid var(--grid)}
 .cell:last-child{border-right:none}
@@ -294,172 +234,52 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
     <div class="blk" id="agent"><div class="wrap hero-c">
       <div class="cellhdr">Distressed multifamily · deal sourcing</div>
       <h1>Find distress <mark>before</mark> it hits the market.</h1>
-
-      <div class="agent" id="agentbox" aria-label="Teez agent demo">
-        <div class="ag-top"><img src="teez-icon.png" alt=""> Teez agent <span class="ag-on">online</span></div>
-        <div class="ag-log">
-          <div class="msg" id="agmsg">Find me 150+ unit multifamily deals with loans maturing in the next 18 months</div>
-          <ul class="ag-steps" id="agsteps">
-            <li class="done">Reading CMBS and agency loan filings</li>
-            <li class="done">Matching tax and code records to owners</li>
-            <li class="done">Scoring 12-month distress risk</li>
-          </ul>
-          <div class="ag-res" id="agres">
-            <div class="deal"><span><b>Willowbrook Commons</b><small>Phoenix, AZ · 240 units · matures Mar 2027</small></span><em class="r1">41%</em></div>
-            <div class="deal"><span><b>Harbor Pointe Apartments</b><small>Columbus, OH · 180 units · matures Aug 2027</small></span><em class="r2">27%</em></div>
-            <div class="deal"><span><b>The Ridgeline at Mill Creek</b><small>Charlotte, NC · 312 units · matures Jan 2028</small></span><em class="r3">12%</em></div>
-            <div class="reply">Want me to underwrite these and draft outreach to the owners?</div>
-          </div>
+      <div class="stage" id="stage">
+        <div class="steps"><button type="button" class="on"><span>Ask</span><i></i></button><button type="button"><span>Find</span><i></i></button><button type="button"><span>Owner</span><i></i></button><button type="button"><span>Alerts</span><i></i></button><button type="button"><span>Outreach</span><i></i></button><button type="button"><span>Bid</span><i></i></button></div>
+        <div class="screen">
+<div class="scene s-ask on"><div class="askwrap"><p class="q in" style="--d:0ms">What are you looking for?</p><div class="prompt"><span><span id="agtype">Find me 150+ unit multifamily deals with loans maturing in the next 18 months</span><i class="caret" aria-hidden="true"></i></span><b id="agsend" aria-hidden="true">↑</b></div></div></div>
+<div class="scene s-find"><div class="cap in" style="--d:0ms"><h3>Finds the distress</h3><p>Loan, tax and code signals searched in plain language, with a 12-month risk estimate on every asset.</p></div><div class="canvas"><div class="split"><div class="card in" style="--d:150ms"><svg class="usmap" viewBox="0 0 480 280" role="img" aria-label="Map of the United States with distress by market"><path d="M51.4 14.2h0M57.6 14.2h0M63.8 14.2h0M70.0 14.2h0M76.2 14.2h0M82.4 14.2h0M88.6 14.2h0M94.8 14.2h0M101.0 14.2h0M51.4 20.4h0M57.6 20.4h0M63.8 20.4h0M70.0 20.4h0M76.2 20.4h0M82.4 20.4h0M88.6 20.4h0M94.8 20.4h0M101.0 20.4h0M107.2 20.4h0M113.4 20.4h0M119.6 20.4h0M125.8 20.4h0M132.0 20.4h0M138.2 20.4h0M144.4 20.4h0M150.6 20.4h0M51.4 26.6h0M57.6 26.6h0M63.8 26.6h0M70.0 26.6h0M76.2 26.6h0M82.4 26.6h0M88.6 26.6h0M94.8 26.6h0M101.0 26.6h0M107.2 26.6h0M113.4 26.6h0M119.6 26.6h0M125.8 26.6h0M132.0 26.6h0M138.2 26.6h0M144.4 26.6h0M150.6 26.6h0M156.8 26.6h0M163.0 26.6h0M169.2 26.6h0M175.4 26.6h0M181.6 26.6h0M187.8 26.6h0M194.0 26.6h0M435.8 26.6h0M442.0 26.6h0M51.4 32.8h0M57.6 32.8h0M63.8 32.8h0M70.0 32.8h0M76.2 32.8h0M82.4 32.8h0M88.6 32.8h0M94.8 32.8h0M101.0 32.8h0M107.2 32.8h0M113.4 32.8h0M119.6 32.8h0M125.8 32.8h0M132.0 32.8h0M138.2 32.8h0M144.4 32.8h0M150.6 32.8h0M156.8 32.8h0M163.0 32.8h0M169.2 32.8h0M175.4 32.8h0M181.6 32.8h0M187.8 32.8h0M194.0 32.8h0M200.2 32.8h0M206.4 32.8h0M212.6 32.8h0M218.8 32.8h0M225.0 32.8h0M231.2 32.8h0M237.4 32.8h0M243.6 32.8h0M429.6 32.8h0M435.8 32.8h0M442.0 32.8h0M51.4 39.0h0M57.6 39.0h0M63.8 39.0h0M70.0 39.0h0M76.2 39.0h0M82.4 39.0h0M88.6 39.0h0M94.8 39.0h0M101.0 39.0h0M107.2 39.0h0M113.4 39.0h0M119.6 39.0h0M125.8 39.0h0M132.0 39.0h0M138.2 39.0h0M144.4 39.0h0M150.6 39.0h0M156.8 39.0h0M163.0 39.0h0M169.2 39.0h0M175.4 39.0h0M181.6 39.0h0M187.8 39.0h0M194.0 39.0h0M200.2 39.0h0M206.4 39.0h0M212.6 39.0h0M218.8 39.0h0M225.0 39.0h0M231.2 39.0h0M237.4 39.0h0M243.6 39.0h0M249.8 39.0h0M256.0 39.0h0M262.2 39.0h0M268.4 39.0h0M429.6 39.0h0M435.8 39.0h0M442.0 39.0h0M45.2 45.2h0M51.4 45.2h0M57.6 45.2h0M63.8 45.2h0M70.0 45.2h0M76.2 45.2h0M82.4 45.2h0M88.6 45.2h0M94.8 45.2h0M101.0 45.2h0M107.2 45.2h0M113.4 45.2h0M119.6 45.2h0M125.8 45.2h0M132.0 45.2h0M138.2 45.2h0M144.4 45.2h0M150.6 45.2h0M156.8 45.2h0M163.0 45.2h0M169.2 45.2h0M175.4 45.2h0M181.6 45.2h0M187.8 45.2h0M194.0 45.2h0M200.2 45.2h0M206.4 45.2h0M212.6 45.2h0M218.8 45.2h0M225.0 45.2h0M231.2 45.2h0M237.4 45.2h0M243.6 45.2h0M249.8 45.2h0M256.0 45.2h0M262.2 45.2h0M268.4 45.2h0M274.6 45.2h0M280.8 45.2h0M429.6 45.2h0M435.8 45.2h0M442.0 45.2h0M448.2 45.2h0M45.2 51.4h0M51.4 51.4h0M57.6 51.4h0M63.8 51.4h0M70.0 51.4h0M76.2 51.4h0M82.4 51.4h0M88.6 51.4h0M94.8 51.4h0M101.0 51.4h0M107.2 51.4h0M113.4 51.4h0M119.6 51.4h0M125.8 51.4h0M132.0 51.4h0M138.2 51.4h0M144.4 51.4h0M150.6 51.4h0M156.8 51.4h0M163.0 51.4h0M169.2 51.4h0M175.4 51.4h0M181.6 51.4h0M187.8 51.4h0M194.0 51.4h0M200.2 51.4h0M206.4 51.4h0M212.6 51.4h0M218.8 51.4h0M225.0 51.4h0M231.2 51.4h0M237.4 51.4h0M243.6 51.4h0M249.8 51.4h0M256.0 51.4h0M262.2 51.4h0M268.4 51.4h0M274.6 51.4h0M299.4 51.4h0M305.6 51.4h0M423.4 51.4h0M429.6 51.4h0M435.8 51.4h0M442.0 51.4h0M39.0 57.6h0M45.2 57.6h0M51.4 57.6h0M57.6 57.6h0M63.8 57.6h0M70.0 57.6h0M76.2 57.6h0M82.4 57.6h0M88.6 57.6h0M94.8 57.6h0M101.0 57.6h0M107.2 57.6h0M113.4 57.6h0M119.6 57.6h0M125.8 57.6h0M132.0 57.6h0M138.2 57.6h0M144.4 57.6h0M150.6 57.6h0M156.8 57.6h0M163.0 57.6h0M169.2 57.6h0M175.4 57.6h0M181.6 57.6h0M187.8 57.6h0M194.0 57.6h0M200.2 57.6h0M206.4 57.6h0M212.6 57.6h0M218.8 57.6h0M225.0 57.6h0M231.2 57.6h0M237.4 57.6h0M243.6 57.6h0M249.8 57.6h0M256.0 57.6h0M262.2 57.6h0M268.4 57.6h0M274.6 57.6h0M280.8 57.6h0M287.0 57.6h0M293.2 57.6h0M299.4 57.6h0M305.6 57.6h0M311.8 57.6h0M318.0 57.6h0M324.2 57.6h0M330.4 57.6h0M404.8 57.6h0M411.0 57.6h0M417.2 57.6h0M423.4 57.6h0M429.6 57.6h0M435.8 57.6h0M39.0 63.8h0M45.2 63.8h0M51.4 63.8h0M57.6 63.8h0M63.8 63.8h0M70.0 63.8h0M76.2 63.8h0M82.4 63.8h0M88.6 63.8h0M94.8 63.8h0M101.0 63.8h0M107.2 63.8h0M113.4 63.8h0M119.6 63.8h0M125.8 63.8h0M132.0 63.8h0M138.2 63.8h0M144.4 63.8h0M150.6 63.8h0M156.8 63.8h0M163.0 63.8h0M169.2 63.8h0M175.4 63.8h0M181.6 63.8h0M187.8 63.8h0M194.0 63.8h0M200.2 63.8h0M206.4 63.8h0M212.6 63.8h0M218.8 63.8h0M225.0 63.8h0M231.2 63.8h0M237.4 63.8h0M243.6 63.8h0M249.8 63.8h0M256.0 63.8h0M262.2 63.8h0M268.4 63.8h0M274.6 63.8h0M280.8 63.8h0M287.0 63.8h0M293.2 63.8h0M299.4 63.8h0M305.6 63.8h0M311.8 63.8h0M318.0 63.8h0M324.2 63.8h0M330.4 63.8h0M336.6 63.8h0M398.6 63.8h0M404.8 63.8h0M411.0 63.8h0M417.2 63.8h0M423.4 63.8h0M429.6 63.8h0M39.0 70.0h0M45.2 70.0h0M51.4 70.0h0M57.6 70.0h0M63.8 70.0h0M70.0 70.0h0M76.2 70.0h0M82.4 70.0h0M88.6 70.0h0M94.8 70.0h0M101.0 70.0h0M107.2 70.0h0M113.4 70.0h0M119.6 70.0h0M125.8 70.0h0M132.0 70.0h0M138.2 70.0h0M144.4 70.0h0M150.6 70.0h0M156.8 70.0h0M163.0 70.0h0M169.2 70.0h0M175.4 70.0h0M181.6 70.0h0M187.8 70.0h0M194.0 70.0h0M200.2 70.0h0M206.4 70.0h0M212.6 70.0h0M218.8 70.0h0M225.0 70.0h0M231.2 70.0h0M237.4 70.0h0M243.6 70.0h0M249.8 70.0h0M256.0 70.0h0M262.2 70.0h0M268.4 70.0h0M274.6 70.0h0M280.8 70.0h0M287.0 70.0h0M293.2 70.0h0M299.4 70.0h0M305.6 70.0h0M311.8 70.0h0M318.0 70.0h0M324.2 70.0h0M330.4 70.0h0M336.6 70.0h0M342.8 70.0h0M392.4 70.0h0M398.6 70.0h0M404.8 70.0h0M411.0 70.0h0M417.2 70.0h0M423.4 70.0h0M429.6 70.0h0M39.0 76.2h0M45.2 76.2h0M51.4 76.2h0M57.6 76.2h0M63.8 76.2h0M70.0 76.2h0M76.2 76.2h0M82.4 76.2h0M88.6 76.2h0M94.8 76.2h0M101.0 76.2h0M107.2 76.2h0M113.4 76.2h0M119.6 76.2h0M125.8 76.2h0M132.0 76.2h0M138.2 76.2h0M144.4 76.2h0M150.6 76.2h0M156.8 76.2h0M163.0 76.2h0M169.2 76.2h0M175.4 76.2h0M181.6 76.2h0M187.8 76.2h0M194.0 76.2h0M200.2 76.2h0M206.4 76.2h0M212.6 76.2h0M218.8 76.2h0M225.0 76.2h0M231.2 76.2h0M237.4 76.2h0M243.6 76.2h0M249.8 76.2h0M256.0 76.2h0M262.2 76.2h0M268.4 76.2h0M274.6 76.2h0M280.8 76.2h0M287.0 76.2h0M293.2 76.2h0M299.4 76.2h0M305.6 76.2h0M311.8 76.2h0M318.0 76.2h0M324.2 76.2h0M330.4 76.2h0M336.6 76.2h0M342.8 76.2h0M386.2 76.2h0M392.4 76.2h0M398.6 76.2h0M404.8 76.2h0M411.0 76.2h0M417.2 76.2h0M423.4 76.2h0M429.6 76.2h0M32.8 82.4h0M39.0 82.4h0M45.2 82.4h0M51.4 82.4h0M57.6 82.4h0M63.8 82.4h0M70.0 82.4h0M76.2 82.4h0M82.4 82.4h0M88.6 82.4h0M94.8 82.4h0M101.0 82.4h0M107.2 82.4h0M113.4 82.4h0M119.6 82.4h0M125.8 82.4h0M132.0 82.4h0M138.2 82.4h0M144.4 82.4h0M150.6 82.4h0M156.8 82.4h0M163.0 82.4h0M169.2 82.4h0M175.4 82.4h0M181.6 82.4h0M187.8 82.4h0M194.0 82.4h0M200.2 82.4h0M206.4 82.4h0M212.6 82.4h0M218.8 82.4h0M225.0 82.4h0M231.2 82.4h0M237.4 82.4h0M243.6 82.4h0M249.8 82.4h0M256.0 82.4h0M262.2 82.4h0M268.4 82.4h0M274.6 82.4h0M280.8 82.4h0M287.0 82.4h0M293.2 82.4h0M299.4 82.4h0M305.6 82.4h0M311.8 82.4h0M318.0 82.4h0M324.2 82.4h0M330.4 82.4h0M336.6 82.4h0M342.8 82.4h0M373.8 82.4h0M380.0 82.4h0M386.2 82.4h0M392.4 82.4h0M398.6 82.4h0M404.8 82.4h0M411.0 82.4h0M417.2 82.4h0M423.4 82.4h0M429.6 82.4h0M435.8 82.4h0M32.8 88.6h0M39.0 88.6h0M45.2 88.6h0M51.4 88.6h0M57.6 88.6h0M63.8 88.6h0M70.0 88.6h0M76.2 88.6h0M82.4 88.6h0M88.6 88.6h0M94.8 88.6h0M101.0 88.6h0M107.2 88.6h0M113.4 88.6h0M119.6 88.6h0M125.8 88.6h0M132.0 88.6h0M138.2 88.6h0M144.4 88.6h0M150.6 88.6h0M156.8 88.6h0M163.0 88.6h0M169.2 88.6h0M175.4 88.6h0M181.6 88.6h0M187.8 88.6h0M194.0 88.6h0M200.2 88.6h0M206.4 88.6h0M212.6 88.6h0M218.8 88.6h0M225.0 88.6h0M231.2 88.6h0M237.4 88.6h0M243.6 88.6h0M249.8 88.6h0M256.0 88.6h0M262.2 88.6h0M268.4 88.6h0M274.6 88.6h0M280.8 88.6h0M287.0 88.6h0M293.2 88.6h0M299.4 88.6h0M305.6 88.6h0M311.8 88.6h0M318.0 88.6h0M324.2 88.6h0M330.4 88.6h0M336.6 88.6h0M342.8 88.6h0M373.8 88.6h0M380.0 88.6h0M386.2 88.6h0M392.4 88.6h0M398.6 88.6h0M404.8 88.6h0M411.0 88.6h0M417.2 88.6h0M423.4 88.6h0M429.6 88.6h0M32.8 94.8h0M39.0 94.8h0M45.2 94.8h0M51.4 94.8h0M57.6 94.8h0M63.8 94.8h0M70.0 94.8h0M76.2 94.8h0M82.4 94.8h0M88.6 94.8h0M94.8 94.8h0M101.0 94.8h0M107.2 94.8h0M113.4 94.8h0M119.6 94.8h0M125.8 94.8h0M132.0 94.8h0M138.2 94.8h0M144.4 94.8h0M150.6 94.8h0M156.8 94.8h0M163.0 94.8h0M169.2 94.8h0M175.4 94.8h0M181.6 94.8h0M187.8 94.8h0M194.0 94.8h0M200.2 94.8h0M206.4 94.8h0M212.6 94.8h0M218.8 94.8h0M225.0 94.8h0M231.2 94.8h0M237.4 94.8h0M243.6 94.8h0M249.8 94.8h0M256.0 94.8h0M262.2 94.8h0M268.4 94.8h0M274.6 94.8h0M280.8 94.8h0M287.0 94.8h0M293.2 94.8h0M299.4 94.8h0M305.6 94.8h0M311.8 94.8h0M318.0 94.8h0M324.2 94.8h0M330.4 94.8h0M336.6 94.8h0M342.8 94.8h0M367.6 94.8h0M373.8 94.8h0M380.0 94.8h0M386.2 94.8h0M392.4 94.8h0M398.6 94.8h0M404.8 94.8h0M411.0 94.8h0M417.2 94.8h0M32.8 101.0h0M39.0 101.0h0M45.2 101.0h0M51.4 101.0h0M57.6 101.0h0M63.8 101.0h0M70.0 101.0h0M76.2 101.0h0M82.4 101.0h0M88.6 101.0h0M94.8 101.0h0M101.0 101.0h0M107.2 101.0h0M113.4 101.0h0M119.6 101.0h0M125.8 101.0h0M132.0 101.0h0M138.2 101.0h0M144.4 101.0h0M150.6 101.0h0M156.8 101.0h0M163.0 101.0h0M169.2 101.0h0M175.4 101.0h0M181.6 101.0h0M187.8 101.0h0M194.0 101.0h0M200.2 101.0h0M206.4 101.0h0M212.6 101.0h0M218.8 101.0h0M225.0 101.0h0M231.2 101.0h0M237.4 101.0h0M243.6 101.0h0M249.8 101.0h0M256.0 101.0h0M262.2 101.0h0M268.4 101.0h0M274.6 101.0h0M280.8 101.0h0M287.0 101.0h0M293.2 101.0h0M299.4 101.0h0M305.6 101.0h0M311.8 101.0h0M318.0 101.0h0M324.2 101.0h0M330.4 101.0h0M336.6 101.0h0M342.8 101.0h0M355.2 101.0h0M361.4 101.0h0M367.6 101.0h0M373.8 101.0h0M380.0 101.0h0M386.2 101.0h0M392.4 101.0h0M398.6 101.0h0M404.8 101.0h0M411.0 101.0h0M32.8 107.2h0M39.0 107.2h0M45.2 107.2h0M51.4 107.2h0M57.6 107.2h0M63.8 107.2h0M70.0 107.2h0M76.2 107.2h0M82.4 107.2h0M88.6 107.2h0M94.8 107.2h0M101.0 107.2h0M107.2 107.2h0M113.4 107.2h0M119.6 107.2h0M125.8 107.2h0M132.0 107.2h0M138.2 107.2h0M144.4 107.2h0M150.6 107.2h0M156.8 107.2h0M163.0 107.2h0M169.2 107.2h0M175.4 107.2h0M181.6 107.2h0M187.8 107.2h0M194.0 107.2h0M200.2 107.2h0M206.4 107.2h0M212.6 107.2h0M218.8 107.2h0M225.0 107.2h0M231.2 107.2h0M237.4 107.2h0M243.6 107.2h0M249.8 107.2h0M256.0 107.2h0M262.2 107.2h0M268.4 107.2h0M274.6 107.2h0M280.8 107.2h0M287.0 107.2h0M293.2 107.2h0M299.4 107.2h0M305.6 107.2h0M311.8 107.2h0M318.0 107.2h0M324.2 107.2h0M330.4 107.2h0M336.6 107.2h0M342.8 107.2h0M349.0 107.2h0M355.2 107.2h0M361.4 107.2h0M367.6 107.2h0M373.8 107.2h0M380.0 107.2h0M386.2 107.2h0M392.4 107.2h0M398.6 107.2h0M404.8 107.2h0M411.0 107.2h0M32.8 113.4h0M39.0 113.4h0M45.2 113.4h0M51.4 113.4h0M57.6 113.4h0M63.8 113.4h0M70.0 113.4h0M76.2 113.4h0M82.4 113.4h0M88.6 113.4h0M94.8 113.4h0M101.0 113.4h0M107.2 113.4h0M113.4 113.4h0M119.6 113.4h0M125.8 113.4h0M132.0 113.4h0M138.2 113.4h0M144.4 113.4h0M150.6 113.4h0M156.8 113.4h0M163.0 113.4h0M169.2 113.4h0M175.4 113.4h0M181.6 113.4h0M187.8 113.4h0M194.0 113.4h0M200.2 113.4h0M206.4 113.4h0M212.6 113.4h0M218.8 113.4h0M225.0 113.4h0M231.2 113.4h0M237.4 113.4h0M243.6 113.4h0M249.8 113.4h0M256.0 113.4h0M262.2 113.4h0M268.4 113.4h0M274.6 113.4h0M280.8 113.4h0M287.0 113.4h0M293.2 113.4h0M299.4 113.4h0M305.6 113.4h0M311.8 113.4h0M318.0 113.4h0M324.2 113.4h0M330.4 113.4h0M336.6 113.4h0M342.8 113.4h0M349.0 113.4h0M355.2 113.4h0M361.4 113.4h0M367.6 113.4h0M373.8 113.4h0M380.0 113.4h0M386.2 113.4h0M392.4 113.4h0M398.6 113.4h0M404.8 113.4h0M411.0 113.4h0M39.0 119.6h0M45.2 119.6h0M51.4 119.6h0M57.6 119.6h0M63.8 119.6h0M70.0 119.6h0M76.2 119.6h0M82.4 119.6h0M88.6 119.6h0M94.8 119.6h0M101.0 119.6h0M107.2 119.6h0M113.4 119.6h0M119.6 119.6h0M125.8 119.6h0M132.0 119.6h0M138.2 119.6h0M144.4 119.6h0M150.6 119.6h0M156.8 119.6h0M163.0 119.6h0M169.2 119.6h0M175.4 119.6h0M181.6 119.6h0M187.8 119.6h0M194.0 119.6h0M200.2 119.6h0M206.4 119.6h0M212.6 119.6h0M218.8 119.6h0M225.0 119.6h0M231.2 119.6h0M237.4 119.6h0M243.6 119.6h0M249.8 119.6h0M256.0 119.6h0M262.2 119.6h0M268.4 119.6h0M274.6 119.6h0M280.8 119.6h0M287.0 119.6h0M293.2 119.6h0M299.4 119.6h0M305.6 119.6h0M311.8 119.6h0M318.0 119.6h0M324.2 119.6h0M330.4 119.6h0M336.6 119.6h0M342.8 119.6h0M349.0 119.6h0M355.2 119.6h0M361.4 119.6h0M367.6 119.6h0M373.8 119.6h0M380.0 119.6h0M386.2 119.6h0M392.4 119.6h0M398.6 119.6h0M404.8 119.6h0M39.0 125.8h0M45.2 125.8h0M51.4 125.8h0M57.6 125.8h0M63.8 125.8h0M70.0 125.8h0M76.2 125.8h0M82.4 125.8h0M88.6 125.8h0M94.8 125.8h0M101.0 125.8h0M107.2 125.8h0M113.4 125.8h0M119.6 125.8h0M125.8 125.8h0M132.0 125.8h0M138.2 125.8h0M144.4 125.8h0M150.6 125.8h0M156.8 125.8h0M163.0 125.8h0M169.2 125.8h0M175.4 125.8h0M181.6 125.8h0M187.8 125.8h0M194.0 125.8h0M200.2 125.8h0M206.4 125.8h0M212.6 125.8h0M218.8 125.8h0M225.0 125.8h0M231.2 125.8h0M237.4 125.8h0M243.6 125.8h0M249.8 125.8h0M256.0 125.8h0M262.2 125.8h0M268.4 125.8h0M274.6 125.8h0M280.8 125.8h0M287.0 125.8h0M293.2 125.8h0M299.4 125.8h0M305.6 125.8h0M311.8 125.8h0M318.0 125.8h0M324.2 125.8h0M330.4 125.8h0M336.6 125.8h0M342.8 125.8h0M349.0 125.8h0M355.2 125.8h0M361.4 125.8h0M367.6 125.8h0M373.8 125.8h0M380.0 125.8h0M386.2 125.8h0M392.4 125.8h0M398.6 125.8h0M404.8 125.8h0M39.0 132.0h0M45.2 132.0h0M51.4 132.0h0M57.6 132.0h0M63.8 132.0h0M70.0 132.0h0M76.2 132.0h0M82.4 132.0h0M88.6 132.0h0M94.8 132.0h0M101.0 132.0h0M107.2 132.0h0M113.4 132.0h0M119.6 132.0h0M125.8 132.0h0M132.0 132.0h0M138.2 132.0h0M144.4 132.0h0M150.6 132.0h0M156.8 132.0h0M163.0 132.0h0M169.2 132.0h0M175.4 132.0h0M181.6 132.0h0M187.8 132.0h0M194.0 132.0h0M200.2 132.0h0M206.4 132.0h0M212.6 132.0h0M218.8 132.0h0M225.0 132.0h0M231.2 132.0h0M237.4 132.0h0M243.6 132.0h0M249.8 132.0h0M256.0 132.0h0M262.2 132.0h0M268.4 132.0h0M274.6 132.0h0M280.8 132.0h0M287.0 132.0h0M293.2 132.0h0M299.4 132.0h0M305.6 132.0h0M311.8 132.0h0M318.0 132.0h0M324.2 132.0h0M330.4 132.0h0M336.6 132.0h0M342.8 132.0h0M349.0 132.0h0M355.2 132.0h0M361.4 132.0h0M367.6 132.0h0M373.8 132.0h0M380.0 132.0h0M386.2 132.0h0M392.4 132.0h0M398.6 132.0h0M404.8 132.0h0M39.0 138.2h0M45.2 138.2h0M51.4 138.2h0M57.6 138.2h0M63.8 138.2h0M70.0 138.2h0M76.2 138.2h0M82.4 138.2h0M88.6 138.2h0M94.8 138.2h0M101.0 138.2h0M107.2 138.2h0M113.4 138.2h0M119.6 138.2h0M125.8 138.2h0M132.0 138.2h0M138.2 138.2h0M144.4 138.2h0M150.6 138.2h0M156.8 138.2h0M163.0 138.2h0M169.2 138.2h0M175.4 138.2h0M181.6 138.2h0M187.8 138.2h0M194.0 138.2h0M200.2 138.2h0M206.4 138.2h0M212.6 138.2h0M218.8 138.2h0M225.0 138.2h0M231.2 138.2h0M237.4 138.2h0M243.6 138.2h0M249.8 138.2h0M256.0 138.2h0M262.2 138.2h0M268.4 138.2h0M274.6 138.2h0M280.8 138.2h0M287.0 138.2h0M293.2 138.2h0M299.4 138.2h0M305.6 138.2h0M311.8 138.2h0M318.0 138.2h0M324.2 138.2h0M330.4 138.2h0M336.6 138.2h0M342.8 138.2h0M349.0 138.2h0M355.2 138.2h0M361.4 138.2h0M367.6 138.2h0M373.8 138.2h0M380.0 138.2h0M386.2 138.2h0M392.4 138.2h0M398.6 138.2h0M404.8 138.2h0M39.0 144.4h0M45.2 144.4h0M51.4 144.4h0M57.6 144.4h0M63.8 144.4h0M70.0 144.4h0M76.2 144.4h0M82.4 144.4h0M88.6 144.4h0M94.8 144.4h0M101.0 144.4h0M107.2 144.4h0M113.4 144.4h0M119.6 144.4h0M125.8 144.4h0M132.0 144.4h0M138.2 144.4h0M144.4 144.4h0M150.6 144.4h0M156.8 144.4h0M163.0 144.4h0M169.2 144.4h0M175.4 144.4h0M181.6 144.4h0M187.8 144.4h0M194.0 144.4h0M200.2 144.4h0M206.4 144.4h0M212.6 144.4h0M218.8 144.4h0M225.0 144.4h0M231.2 144.4h0M237.4 144.4h0M243.6 144.4h0M249.8 144.4h0M256.0 144.4h0M262.2 144.4h0M268.4 144.4h0M274.6 144.4h0M280.8 144.4h0M287.0 144.4h0M293.2 144.4h0M299.4 144.4h0M305.6 144.4h0M311.8 144.4h0M318.0 144.4h0M324.2 144.4h0M330.4 144.4h0M336.6 144.4h0M342.8 144.4h0M349.0 144.4h0M355.2 144.4h0M361.4 144.4h0M367.6 144.4h0M373.8 144.4h0M380.0 144.4h0M386.2 144.4h0M392.4 144.4h0M398.6 144.4h0M404.8 144.4h0M39.0 150.6h0M45.2 150.6h0M51.4 150.6h0M57.6 150.6h0M63.8 150.6h0M70.0 150.6h0M76.2 150.6h0M82.4 150.6h0M88.6 150.6h0M94.8 150.6h0M101.0 150.6h0M107.2 150.6h0M113.4 150.6h0M119.6 150.6h0M125.8 150.6h0M132.0 150.6h0M138.2 150.6h0M144.4 150.6h0M150.6 150.6h0M156.8 150.6h0M163.0 150.6h0M169.2 150.6h0M175.4 150.6h0M181.6 150.6h0M187.8 150.6h0M194.0 150.6h0M200.2 150.6h0M206.4 150.6h0M212.6 150.6h0M218.8 150.6h0M225.0 150.6h0M231.2 150.6h0M237.4 150.6h0M243.6 150.6h0M249.8 150.6h0M256.0 150.6h0M262.2 150.6h0M268.4 150.6h0M274.6 150.6h0M280.8 150.6h0M287.0 150.6h0M293.2 150.6h0M299.4 150.6h0M305.6 150.6h0M311.8 150.6h0M318.0 150.6h0M324.2 150.6h0M330.4 150.6h0M336.6 150.6h0M342.8 150.6h0M349.0 150.6h0M355.2 150.6h0M361.4 150.6h0M367.6 150.6h0M373.8 150.6h0M380.0 150.6h0M386.2 150.6h0M392.4 150.6h0M398.6 150.6h0M404.8 150.6h0M411.0 150.6h0M45.2 156.8h0M51.4 156.8h0M57.6 156.8h0M63.8 156.8h0M70.0 156.8h0M76.2 156.8h0M82.4 156.8h0M88.6 156.8h0M94.8 156.8h0M101.0 156.8h0M107.2 156.8h0M113.4 156.8h0M119.6 156.8h0M125.8 156.8h0M132.0 156.8h0M138.2 156.8h0M144.4 156.8h0M150.6 156.8h0M156.8 156.8h0M163.0 156.8h0M169.2 156.8h0M175.4 156.8h0M181.6 156.8h0M187.8 156.8h0M194.0 156.8h0M200.2 156.8h0M206.4 156.8h0M212.6 156.8h0M218.8 156.8h0M225.0 156.8h0M231.2 156.8h0M237.4 156.8h0M243.6 156.8h0M249.8 156.8h0M256.0 156.8h0M262.2 156.8h0M268.4 156.8h0M274.6 156.8h0M280.8 156.8h0M287.0 156.8h0M293.2 156.8h0M299.4 156.8h0M305.6 156.8h0M311.8 156.8h0M318.0 156.8h0M324.2 156.8h0M330.4 156.8h0M336.6 156.8h0M342.8 156.8h0M349.0 156.8h0M355.2 156.8h0M361.4 156.8h0M367.6 156.8h0M373.8 156.8h0M380.0 156.8h0M386.2 156.8h0M392.4 156.8h0M398.6 156.8h0M404.8 156.8h0M411.0 156.8h0M51.4 163.0h0M57.6 163.0h0M63.8 163.0h0M70.0 163.0h0M76.2 163.0h0M82.4 163.0h0M88.6 163.0h0M94.8 163.0h0M101.0 163.0h0M107.2 163.0h0M113.4 163.0h0M119.6 163.0h0M125.8 163.0h0M132.0 163.0h0M138.2 163.0h0M144.4 163.0h0M150.6 163.0h0M156.8 163.0h0M163.0 163.0h0M169.2 163.0h0M175.4 163.0h0M181.6 163.0h0M187.8 163.0h0M194.0 163.0h0M200.2 163.0h0M206.4 163.0h0M212.6 163.0h0M218.8 163.0h0M225.0 163.0h0M231.2 163.0h0M237.4 163.0h0M243.6 163.0h0M249.8 163.0h0M256.0 163.0h0M262.2 163.0h0M268.4 163.0h0M274.6 163.0h0M280.8 163.0h0M287.0 163.0h0M293.2 163.0h0M299.4 163.0h0M305.6 163.0h0M311.8 163.0h0M318.0 163.0h0M324.2 163.0h0M330.4 163.0h0M336.6 163.0h0M342.8 163.0h0M349.0 163.0h0M355.2 163.0h0M361.4 163.0h0M367.6 163.0h0M373.8 163.0h0M380.0 163.0h0M386.2 163.0h0M392.4 163.0h0M398.6 163.0h0M404.8 163.0h0M57.6 169.2h0M63.8 169.2h0M70.0 169.2h0M76.2 169.2h0M82.4 169.2h0M88.6 169.2h0M94.8 169.2h0M101.0 169.2h0M107.2 169.2h0M113.4 169.2h0M119.6 169.2h0M125.8 169.2h0M132.0 169.2h0M138.2 169.2h0M144.4 169.2h0M150.6 169.2h0M156.8 169.2h0M163.0 169.2h0M169.2 169.2h0M175.4 169.2h0M181.6 169.2h0M187.8 169.2h0M194.0 169.2h0M200.2 169.2h0M206.4 169.2h0M212.6 169.2h0M218.8 169.2h0M225.0 169.2h0M231.2 169.2h0M237.4 169.2h0M243.6 169.2h0M249.8 169.2h0M256.0 169.2h0M262.2 169.2h0M268.4 169.2h0M274.6 169.2h0M280.8 169.2h0M287.0 169.2h0M293.2 169.2h0M299.4 169.2h0M305.6 169.2h0M311.8 169.2h0M318.0 169.2h0M324.2 169.2h0M330.4 169.2h0M336.6 169.2h0M342.8 169.2h0M349.0 169.2h0M355.2 169.2h0M361.4 169.2h0M367.6 169.2h0M373.8 169.2h0M380.0 169.2h0M386.2 169.2h0M392.4 169.2h0M398.6 169.2h0M63.8 175.4h0M70.0 175.4h0M76.2 175.4h0M82.4 175.4h0M88.6 175.4h0M94.8 175.4h0M101.0 175.4h0M107.2 175.4h0M113.4 175.4h0M119.6 175.4h0M125.8 175.4h0M132.0 175.4h0M138.2 175.4h0M144.4 175.4h0M150.6 175.4h0M156.8 175.4h0M163.0 175.4h0M169.2 175.4h0M175.4 175.4h0M181.6 175.4h0M187.8 175.4h0M194.0 175.4h0M200.2 175.4h0M206.4 175.4h0M212.6 175.4h0M218.8 175.4h0M225.0 175.4h0M231.2 175.4h0M237.4 175.4h0M243.6 175.4h0M249.8 175.4h0M256.0 175.4h0M262.2 175.4h0M268.4 175.4h0M274.6 175.4h0M280.8 175.4h0M287.0 175.4h0M293.2 175.4h0M299.4 175.4h0M305.6 175.4h0M311.8 175.4h0M318.0 175.4h0M324.2 175.4h0M330.4 175.4h0M336.6 175.4h0M342.8 175.4h0M349.0 175.4h0M355.2 175.4h0M361.4 175.4h0M367.6 175.4h0M373.8 175.4h0M380.0 175.4h0M386.2 175.4h0M392.4 175.4h0M63.8 181.6h0M70.0 181.6h0M76.2 181.6h0M82.4 181.6h0M88.6 181.6h0M94.8 181.6h0M101.0 181.6h0M107.2 181.6h0M113.4 181.6h0M119.6 181.6h0M125.8 181.6h0M132.0 181.6h0M138.2 181.6h0M144.4 181.6h0M150.6 181.6h0M156.8 181.6h0M163.0 181.6h0M169.2 181.6h0M175.4 181.6h0M181.6 181.6h0M187.8 181.6h0M194.0 181.6h0M200.2 181.6h0M206.4 181.6h0M212.6 181.6h0M218.8 181.6h0M225.0 181.6h0M231.2 181.6h0M237.4 181.6h0M243.6 181.6h0M249.8 181.6h0M256.0 181.6h0M262.2 181.6h0M268.4 181.6h0M274.6 181.6h0M280.8 181.6h0M287.0 181.6h0M293.2 181.6h0M299.4 181.6h0M305.6 181.6h0M311.8 181.6h0M318.0 181.6h0M324.2 181.6h0M330.4 181.6h0M336.6 181.6h0M342.8 181.6h0M349.0 181.6h0M355.2 181.6h0M361.4 181.6h0M367.6 181.6h0M373.8 181.6h0M380.0 181.6h0M386.2 181.6h0M82.4 187.8h0M88.6 187.8h0M94.8 187.8h0M101.0 187.8h0M107.2 187.8h0M113.4 187.8h0M119.6 187.8h0M125.8 187.8h0M132.0 187.8h0M138.2 187.8h0M144.4 187.8h0M150.6 187.8h0M156.8 187.8h0M163.0 187.8h0M169.2 187.8h0M175.4 187.8h0M181.6 187.8h0M187.8 187.8h0M194.0 187.8h0M200.2 187.8h0M206.4 187.8h0M212.6 187.8h0M218.8 187.8h0M225.0 187.8h0M231.2 187.8h0M237.4 187.8h0M243.6 187.8h0M249.8 187.8h0M256.0 187.8h0M262.2 187.8h0M268.4 187.8h0M274.6 187.8h0M280.8 187.8h0M287.0 187.8h0M293.2 187.8h0M299.4 187.8h0M305.6 187.8h0M311.8 187.8h0M318.0 187.8h0M324.2 187.8h0M330.4 187.8h0M336.6 187.8h0M342.8 187.8h0M349.0 187.8h0M355.2 187.8h0M361.4 187.8h0M367.6 187.8h0M373.8 187.8h0M380.0 187.8h0M386.2 187.8h0M94.8 194.0h0M101.0 194.0h0M107.2 194.0h0M113.4 194.0h0M119.6 194.0h0M125.8 194.0h0M132.0 194.0h0M138.2 194.0h0M144.4 194.0h0M150.6 194.0h0M156.8 194.0h0M163.0 194.0h0M169.2 194.0h0M175.4 194.0h0M181.6 194.0h0M187.8 194.0h0M194.0 194.0h0M200.2 194.0h0M206.4 194.0h0M212.6 194.0h0M218.8 194.0h0M225.0 194.0h0M231.2 194.0h0M237.4 194.0h0M243.6 194.0h0M249.8 194.0h0M256.0 194.0h0M262.2 194.0h0M268.4 194.0h0M274.6 194.0h0M280.8 194.0h0M287.0 194.0h0M293.2 194.0h0M299.4 194.0h0M305.6 194.0h0M311.8 194.0h0M318.0 194.0h0M324.2 194.0h0M330.4 194.0h0M336.6 194.0h0M342.8 194.0h0M349.0 194.0h0M355.2 194.0h0M361.4 194.0h0M367.6 194.0h0M373.8 194.0h0M380.0 194.0h0M107.2 200.2h0M113.4 200.2h0M119.6 200.2h0M125.8 200.2h0M132.0 200.2h0M138.2 200.2h0M144.4 200.2h0M150.6 200.2h0M156.8 200.2h0M163.0 200.2h0M169.2 200.2h0M175.4 200.2h0M181.6 200.2h0M187.8 200.2h0M194.0 200.2h0M200.2 200.2h0M206.4 200.2h0M212.6 200.2h0M218.8 200.2h0M225.0 200.2h0M231.2 200.2h0M237.4 200.2h0M243.6 200.2h0M249.8 200.2h0M256.0 200.2h0M262.2 200.2h0M268.4 200.2h0M274.6 200.2h0M280.8 200.2h0M287.0 200.2h0M293.2 200.2h0M299.4 200.2h0M305.6 200.2h0M311.8 200.2h0M318.0 200.2h0M324.2 200.2h0M330.4 200.2h0M336.6 200.2h0M342.8 200.2h0M349.0 200.2h0M355.2 200.2h0M361.4 200.2h0M367.6 200.2h0M373.8 200.2h0M113.4 206.4h0M119.6 206.4h0M125.8 206.4h0M132.0 206.4h0M138.2 206.4h0M150.6 206.4h0M156.8 206.4h0M163.0 206.4h0M169.2 206.4h0M175.4 206.4h0M181.6 206.4h0M187.8 206.4h0M194.0 206.4h0M200.2 206.4h0M206.4 206.4h0M212.6 206.4h0M218.8 206.4h0M225.0 206.4h0M231.2 206.4h0M237.4 206.4h0M243.6 206.4h0M249.8 206.4h0M256.0 206.4h0M262.2 206.4h0M268.4 206.4h0M274.6 206.4h0M280.8 206.4h0M287.0 206.4h0M293.2 206.4h0M299.4 206.4h0M305.6 206.4h0M311.8 206.4h0M318.0 206.4h0M324.2 206.4h0M330.4 206.4h0M336.6 206.4h0M342.8 206.4h0M349.0 206.4h0M355.2 206.4h0M361.4 206.4h0M367.6 206.4h0M373.8 206.4h0M156.8 212.6h0M163.0 212.6h0M169.2 212.6h0M175.4 212.6h0M181.6 212.6h0M187.8 212.6h0M194.0 212.6h0M200.2 212.6h0M206.4 212.6h0M212.6 212.6h0M218.8 212.6h0M225.0 212.6h0M231.2 212.6h0M237.4 212.6h0M243.6 212.6h0M249.8 212.6h0M256.0 212.6h0M262.2 212.6h0M268.4 212.6h0M274.6 212.6h0M280.8 212.6h0M287.0 212.6h0M293.2 212.6h0M299.4 212.6h0M305.6 212.6h0M311.8 212.6h0M318.0 212.6h0M324.2 212.6h0M330.4 212.6h0M336.6 212.6h0M342.8 212.6h0M349.0 212.6h0M355.2 212.6h0M361.4 212.6h0M367.6 212.6h0M373.8 212.6h0M163.0 218.8h0M169.2 218.8h0M175.4 218.8h0M181.6 218.8h0M187.8 218.8h0M194.0 218.8h0M200.2 218.8h0M206.4 218.8h0M212.6 218.8h0M218.8 218.8h0M225.0 218.8h0M231.2 218.8h0M237.4 218.8h0M243.6 218.8h0M249.8 218.8h0M256.0 218.8h0M262.2 218.8h0M268.4 218.8h0M274.6 218.8h0M280.8 218.8h0M287.0 218.8h0M293.2 218.8h0M299.4 218.8h0M305.6 218.8h0M311.8 218.8h0M318.0 218.8h0M324.2 218.8h0M330.4 218.8h0M336.6 218.8h0M342.8 218.8h0M349.0 218.8h0M355.2 218.8h0M361.4 218.8h0M367.6 218.8h0M373.8 218.8h0M169.2 225.0h0M175.4 225.0h0M181.6 225.0h0M187.8 225.0h0M194.0 225.0h0M200.2 225.0h0M206.4 225.0h0M212.6 225.0h0M218.8 225.0h0M225.0 225.0h0M231.2 225.0h0M237.4 225.0h0M243.6 225.0h0M249.8 225.0h0M256.0 225.0h0M262.2 225.0h0M268.4 225.0h0M274.6 225.0h0M280.8 225.0h0M287.0 225.0h0M293.2 225.0h0M299.4 225.0h0M305.6 225.0h0M311.8 225.0h0M336.6 225.0h0M342.8 225.0h0M355.2 225.0h0M361.4 225.0h0M367.6 225.0h0M373.8 225.0h0M169.2 231.2h0M175.4 231.2h0M181.6 231.2h0M194.0 231.2h0M200.2 231.2h0M206.4 231.2h0M212.6 231.2h0M218.8 231.2h0M225.0 231.2h0M231.2 231.2h0M237.4 231.2h0M243.6 231.2h0M249.8 231.2h0M256.0 231.2h0M262.2 231.2h0M268.4 231.2h0M274.6 231.2h0M280.8 231.2h0M287.0 231.2h0M293.2 231.2h0M299.4 231.2h0M367.6 231.2h0M373.8 231.2h0M380.0 231.2h0M181.6 237.4h0M200.2 237.4h0M206.4 237.4h0M212.6 237.4h0M218.8 237.4h0M225.0 237.4h0M231.2 237.4h0M237.4 237.4h0M243.6 237.4h0M249.8 237.4h0M256.0 237.4h0M293.2 237.4h0M299.4 237.4h0M305.6 237.4h0M367.6 237.4h0M373.8 237.4h0M380.0 237.4h0M206.4 243.6h0M212.6 243.6h0M218.8 243.6h0M225.0 243.6h0M231.2 243.6h0M237.4 243.6h0M243.6 243.6h0M367.6 243.6h0M373.8 243.6h0M380.0 243.6h0M386.2 243.6h0M212.6 249.8h0M218.8 249.8h0M225.0 249.8h0M231.2 249.8h0M237.4 249.8h0M373.8 249.8h0M380.0 249.8h0M386.2 249.8h0M212.6 256.0h0M218.8 256.0h0M225.0 256.0h0M231.2 256.0h0M373.8 256.0h0M380.0 256.0h0M386.2 256.0h0M392.4 256.0h0M218.8 262.2h0M225.0 262.2h0M231.2 262.2h0M380.0 262.2h0M386.2 262.2h0M392.4 262.2h0M225.0 268.4h0M231.2 268.4h0" fill="none" stroke="#CDD2D7" stroke-width="3.6" stroke-linecap="round"/><circle cx="237.9" cy="202.0" r="3.2" fill="#E8A33D" opacity=".9"/><circle cx="368.5" cy="243.2" r="3.2" fill="#F2CB82" opacity=".9"/><circle cx="174.1" cy="126.1" r="3.2" fill="#F2CB82" opacity=".9"/><circle cx="250.4" cy="233.4" r="3.2" fill="#E8A33D" opacity=".9"/><circle cx="87.6" cy="150.8" r="3.2" fill="#E8A33D" opacity=".9"/><circle cx="256.1" cy="136.0" r="3.2" fill="#F2CB82" opacity=".9"/><circle cx="320.9" cy="163.1" r="3.2" fill="#F2CB82" opacity=".9"/><circle cx="222.4" cy="236.6" r="3.2" fill="#F2CB82" opacity=".9"/><circle class="pulse" cx="107.8" cy="183.5" r="7" fill="none" stroke="#E5604D" stroke-width="1.5"/><circle cx="107.8" cy="183.5" r="6.0" fill="#E5604D" stroke="#1F2329" stroke-width="1.3"/><text x="118.8" y="187.5" text-anchor="start" class="mlab">Phoenix · 41%</text><circle cx="346.6" cy="120.2" r="5.2" fill="#E8A33D" stroke="#1F2329" stroke-width="1.3"/><text x="342.6" y="109.2" text-anchor="end" class="mlab">Columbus · 27%</text><circle cx="371.2" cy="166.4" r="4.6" fill="#F2CB82" stroke="#1F2329" stroke-width="1.3"/><text x="373.2" y="184.4" text-anchor="middle" class="mlab">Charlotte · 12%</text></svg></div><div class="list"><div class="row in" style="--d:500ms"><span><b>Willowbrook Commons</b><small>Phoenix, AZ · 240 units</small></span><em class="r1">41%</em></div><div class="row in" style="--d:720ms"><span><b>Harbor Pointe Apartments</b><small>Columbus, OH · 180 units</small></span><em class="r2">27%</em></div><div class="row in" style="--d:940ms"><span><b>The Ridgeline at Mill Creek</b><small>Charlotte, NC · 312 units</small></span><em class="r3">12%</em></div></div></div></div></div>
+<div class="scene s-owner"><div class="cap in" style="--d:0ms"><h3>Knows the owner</h3><p>From the LLC to the sponsor, with every property they control and who to call.</p></div><div class="canvas"><div class="chain"><div class="node in" style="--d:150ms">Harbor Pointe Apartments LLC<small>Owner of record</small></div><i class="link in" style="--d:500ms"></i><div class="node in" style="--d:700ms">Lakeshore Holdings LP<small>Holding entity</small></div><i class="link in" style="--d:1050ms"></i><div class="node key in" style="--d:1250ms">Lakeshore Capital Partners<small>Sponsor · 7 properties · 1,420 units</small></div><div class="who in" style="--d:1900ms"><span>Asset manager · phone <em>High confidence</em></span><span>Special servicer · email <em>Verified</em></span></div></div></div></div>
+<div class="scene s-alert"><div class="cap in" style="--d:0ms"><h3>Watches for changes</h3><p>Alerts the day a loan moves to special servicing, a maturity gets close or a filing appears.</p></div><div class="canvas"><div class="list wide"><div class="row in" style="--d:200ms"><i class="d red"></i><span><b>Willowbrook Commons</b><small>Moved to special servicing</small></span><time>2h ago</time></div><div class="row in" style="--d:900ms"><i class="d amb"></i><span><b>Harbor Pointe Apartments</b><small>Maturity now inside 12 months</small></span><time>Yesterday</time></div><div class="row in" style="--d:1600ms"><i class="d amb"></i><span><b>The Ridgeline at Mill Creek</b><small>New tax lien recorded</small></span><time>Nov 22</time></div></div></div></div>
+<div class="scene s-voice"><div class="cap in" style="--d:0ms"><h3>Starts the conversation</h3><p>AI voice, email and text outreach, from a list and a script you approve.</p></div><div class="canvas"><div class="list wide"><div class="row in" style="--d:150ms"><i class="d grn"></i><span><b>AI voice call</b><small>Willowbrook Commons · asset manager</small></span><time>0:42</time></div><div class="wave in" style="--d:500ms"><i style="height:8px;animation-delay:0ms"></i><i style="height:14px;animation-delay:70ms"></i><i style="height:22px;animation-delay:140ms"></i><i style="height:12px;animation-delay:210ms"></i><i style="height:26px;animation-delay:280ms"></i><i style="height:18px;animation-delay:350ms"></i><i style="height:10px;animation-delay:420ms"></i><i style="height:24px;animation-delay:490ms"></i><i style="height:30px;animation-delay:560ms"></i><i style="height:16px;animation-delay:630ms"></i><i style="height:9px;animation-delay:700ms"></i><i style="height:20px;animation-delay:770ms"></i><i style="height:28px;animation-delay:840ms"></i><i style="height:14px;animation-delay:10ms"></i><i style="height:22px;animation-delay:80ms"></i><i style="height:10px;animation-delay:150ms"></i><i style="height:18px;animation-delay:220ms"></i><i style="height:26px;animation-delay:290ms"></i><i style="height:12px;animation-delay:360ms"></i><i style="height:8px;animation-delay:430ms"></i><i style="height:16px;animation-delay:500ms"></i><i style="height:22px;animation-delay:570ms"></i><i style="height:10px;animation-delay:640ms"></i><i style="height:6px;animation-delay:710ms"></i><i style="height:14px;animation-delay:780ms"></i><i style="height:24px;animation-delay:850ms"></i><i style="height:18px;animation-delay:20ms"></i><i style="height:10px;animation-delay:90ms"></i></div><div class="row in" style="--d:1500ms"><i class="d grn"></i><span><b>Voicemail left</b><small>Follow-up text sent with your details</small></span><time>✓</time></div></div></div></div>
+<div class="scene s-bid"><div class="cap in" style="--d:0ms"><h3>Prices the bid</h3><p>One click opens the asset in Teez underwriting, pre-filled, so a lead becomes an offer.</p></div><div class="canvas"><div class="list wide"><div class="row in" style="--d:150ms"><span><b>Willowbrook Commons</b><small>Opened in Teez · pre-filled from the asset</small></span><time>Underwrite →</time></div><div class="nums"><div class="in" style="--d:600ms"><small>Max bid</small><b>$31.2M</b></div><div class="in" style="--d:850ms"><small>Levered IRR</small><b>17.4%</b></div><div class="in" style="--d:1100ms"><small>Going-in cap</small><b>6.8%</b></div></div></div></div></div>
         </div>
-        <div class="ag-input"><div class="ag-text"><span id="agtype"></span><i class="caret" aria-hidden="true"></i><span class="hint" id="aghint">Ask Teez to find a deal…</span></div><span class="send" id="agsend" aria-hidden="true">↑</span></div>
       </div>
       <p class="sub">Let AI do the hard work and hand off deals that are likely to close. A model, trained on past loan outcomes, estimates each multifamily asset's chance of distress from loan, tax and code signals joined to the property and owner. It shows the reasons behind every score, and where every field came from.</p>
-      <div class="cta"><a class="btn" href="#early-access">Get early access</a><a class="btn btn-o" href="#how">See how it works</a></div>
-    </div></div>
-
-    <div class="blk" id="how"><div class="wrap">
-      <h2>How it works.</h2>
-      <p class="lede">You ask. The agent does the digging and hands you deals worth chasing.</p>
-      <div class="flow" id="flow">
-        <div class="rail" aria-hidden="true"><i id="railfill"></i></div>
-        <article class="fs">
-          <div class="dot">1</div>
-          <div class="fv v-ask"><span class="bubble">Find me deals in the Sunbelt</span><span class="typing"><i></i><i></i><i></i></span></div>
-          <h3>Ask</h3><p>Tell the agent what you buy: markets, size, timing.</p>
-        </article>
-        <article class="fs">
-          <div class="dot">2</div>
-          <div class="fv v-detect"><span class="chipx c1">Loan status</span><span class="chipx c2">Tax records</span><span class="chipx c3">Code violations</span><span class="core">1 property</span></div>
-          <h3>Detect</h3><p>Signals are joined to the same property and owner.</p>
-        </article>
-        <article class="fs">
-          <div class="dot">3</div>
-          <div class="fv v-score"><span class="big">41%</span><span class="lbl">12-month risk</span><span class="bar"><i style="--w:88%"></i></span><span class="bar"><i style="--w:62%"></i></span><span class="bar"><i style="--w:40%"></i></span></div>
-          <h3>Explain</h3><p>Every score comes with the drivers behind it.</p>
-        </article>
-        <article class="fs">
-          <div class="dot">4</div>
-          <div class="fv v-bid"><span class="lbl">Max bid</span><span class="big">$31.2M</span><span class="pill">Underwrite →</span><span class="pill alt">Draft outreach</span></div>
-          <h3>Act</h3><p>Underwrite in <a href="https://teez.ai">Teez</a> and reach the owner.</p>
-        </article>
-      </div>
-    </div></div>
-
-    <div class="blk" id="features"><div class="wrap">
-      <h2>From first signal to first conversation.</h2>
-      <p class="lede">Everything between spotting distress and talking to the owner, in one workbook.</p>
-
-      <div class="bento">
-
-        <article class="tile t-find">
-          <div class="vis">
-            <div class="ask"><span class="q">Ask</span> 200+ unit assets in Texas with loans maturing in the next 12 months</div>
-            <div class="heatwrap"><div class="mapbox"><svg class="usmap" viewBox="0 0 480 280" role="img" aria-label="Map of the United States with distress by market"><path d="M51.4 14.2h0M57.6 14.2h0M63.8 14.2h0M70.0 14.2h0M76.2 14.2h0M82.4 14.2h0M88.6 14.2h0M94.8 14.2h0M101.0 14.2h0M51.4 20.4h0M57.6 20.4h0M63.8 20.4h0M70.0 20.4h0M76.2 20.4h0M82.4 20.4h0M88.6 20.4h0M94.8 20.4h0M101.0 20.4h0M107.2 20.4h0M113.4 20.4h0M119.6 20.4h0M125.8 20.4h0M132.0 20.4h0M138.2 20.4h0M144.4 20.4h0M150.6 20.4h0M51.4 26.6h0M57.6 26.6h0M63.8 26.6h0M70.0 26.6h0M76.2 26.6h0M82.4 26.6h0M88.6 26.6h0M94.8 26.6h0M101.0 26.6h0M107.2 26.6h0M113.4 26.6h0M119.6 26.6h0M125.8 26.6h0M132.0 26.6h0M138.2 26.6h0M144.4 26.6h0M150.6 26.6h0M156.8 26.6h0M163.0 26.6h0M169.2 26.6h0M175.4 26.6h0M181.6 26.6h0M187.8 26.6h0M194.0 26.6h0M435.8 26.6h0M442.0 26.6h0M51.4 32.8h0M57.6 32.8h0M63.8 32.8h0M70.0 32.8h0M76.2 32.8h0M82.4 32.8h0M88.6 32.8h0M94.8 32.8h0M101.0 32.8h0M107.2 32.8h0M113.4 32.8h0M119.6 32.8h0M125.8 32.8h0M132.0 32.8h0M138.2 32.8h0M144.4 32.8h0M150.6 32.8h0M156.8 32.8h0M163.0 32.8h0M169.2 32.8h0M175.4 32.8h0M181.6 32.8h0M187.8 32.8h0M194.0 32.8h0M200.2 32.8h0M206.4 32.8h0M212.6 32.8h0M218.8 32.8h0M225.0 32.8h0M231.2 32.8h0M237.4 32.8h0M243.6 32.8h0M429.6 32.8h0M435.8 32.8h0M442.0 32.8h0M51.4 39.0h0M57.6 39.0h0M63.8 39.0h0M70.0 39.0h0M76.2 39.0h0M82.4 39.0h0M88.6 39.0h0M94.8 39.0h0M101.0 39.0h0M107.2 39.0h0M113.4 39.0h0M119.6 39.0h0M125.8 39.0h0M132.0 39.0h0M138.2 39.0h0M144.4 39.0h0M150.6 39.0h0M156.8 39.0h0M163.0 39.0h0M169.2 39.0h0M175.4 39.0h0M181.6 39.0h0M187.8 39.0h0M194.0 39.0h0M200.2 39.0h0M206.4 39.0h0M212.6 39.0h0M218.8 39.0h0M225.0 39.0h0M231.2 39.0h0M237.4 39.0h0M243.6 39.0h0M249.8 39.0h0M256.0 39.0h0M262.2 39.0h0M268.4 39.0h0M429.6 39.0h0M435.8 39.0h0M442.0 39.0h0M45.2 45.2h0M51.4 45.2h0M57.6 45.2h0M63.8 45.2h0M70.0 45.2h0M76.2 45.2h0M82.4 45.2h0M88.6 45.2h0M94.8 45.2h0M101.0 45.2h0M107.2 45.2h0M113.4 45.2h0M119.6 45.2h0M125.8 45.2h0M132.0 45.2h0M138.2 45.2h0M144.4 45.2h0M150.6 45.2h0M156.8 45.2h0M163.0 45.2h0M169.2 45.2h0M175.4 45.2h0M181.6 45.2h0M187.8 45.2h0M194.0 45.2h0M200.2 45.2h0M206.4 45.2h0M212.6 45.2h0M218.8 45.2h0M225.0 45.2h0M231.2 45.2h0M237.4 45.2h0M243.6 45.2h0M249.8 45.2h0M256.0 45.2h0M262.2 45.2h0M268.4 45.2h0M274.6 45.2h0M280.8 45.2h0M429.6 45.2h0M435.8 45.2h0M442.0 45.2h0M448.2 45.2h0M45.2 51.4h0M51.4 51.4h0M57.6 51.4h0M63.8 51.4h0M70.0 51.4h0M76.2 51.4h0M82.4 51.4h0M88.6 51.4h0M94.8 51.4h0M101.0 51.4h0M107.2 51.4h0M113.4 51.4h0M119.6 51.4h0M125.8 51.4h0M132.0 51.4h0M138.2 51.4h0M144.4 51.4h0M150.6 51.4h0M156.8 51.4h0M163.0 51.4h0M169.2 51.4h0M175.4 51.4h0M181.6 51.4h0M187.8 51.4h0M194.0 51.4h0M200.2 51.4h0M206.4 51.4h0M212.6 51.4h0M218.8 51.4h0M225.0 51.4h0M231.2 51.4h0M237.4 51.4h0M243.6 51.4h0M249.8 51.4h0M256.0 51.4h0M262.2 51.4h0M268.4 51.4h0M274.6 51.4h0M299.4 51.4h0M305.6 51.4h0M423.4 51.4h0M429.6 51.4h0M435.8 51.4h0M442.0 51.4h0M39.0 57.6h0M45.2 57.6h0M51.4 57.6h0M57.6 57.6h0M63.8 57.6h0M70.0 57.6h0M76.2 57.6h0M82.4 57.6h0M88.6 57.6h0M94.8 57.6h0M101.0 57.6h0M107.2 57.6h0M113.4 57.6h0M119.6 57.6h0M125.8 57.6h0M132.0 57.6h0M138.2 57.6h0M144.4 57.6h0M150.6 57.6h0M156.8 57.6h0M163.0 57.6h0M169.2 57.6h0M175.4 57.6h0M181.6 57.6h0M187.8 57.6h0M194.0 57.6h0M200.2 57.6h0M206.4 57.6h0M212.6 57.6h0M218.8 57.6h0M225.0 57.6h0M231.2 57.6h0M237.4 57.6h0M243.6 57.6h0M249.8 57.6h0M256.0 57.6h0M262.2 57.6h0M268.4 57.6h0M274.6 57.6h0M280.8 57.6h0M287.0 57.6h0M293.2 57.6h0M299.4 57.6h0M305.6 57.6h0M311.8 57.6h0M318.0 57.6h0M324.2 57.6h0M330.4 57.6h0M404.8 57.6h0M411.0 57.6h0M417.2 57.6h0M423.4 57.6h0M429.6 57.6h0M435.8 57.6h0M39.0 63.8h0M45.2 63.8h0M51.4 63.8h0M57.6 63.8h0M63.8 63.8h0M70.0 63.8h0M76.2 63.8h0M82.4 63.8h0M88.6 63.8h0M94.8 63.8h0M101.0 63.8h0M107.2 63.8h0M113.4 63.8h0M119.6 63.8h0M125.8 63.8h0M132.0 63.8h0M138.2 63.8h0M144.4 63.8h0M150.6 63.8h0M156.8 63.8h0M163.0 63.8h0M169.2 63.8h0M175.4 63.8h0M181.6 63.8h0M187.8 63.8h0M194.0 63.8h0M200.2 63.8h0M206.4 63.8h0M212.6 63.8h0M218.8 63.8h0M225.0 63.8h0M231.2 63.8h0M237.4 63.8h0M243.6 63.8h0M249.8 63.8h0M256.0 63.8h0M262.2 63.8h0M268.4 63.8h0M274.6 63.8h0M280.8 63.8h0M287.0 63.8h0M293.2 63.8h0M299.4 63.8h0M305.6 63.8h0M311.8 63.8h0M318.0 63.8h0M324.2 63.8h0M330.4 63.8h0M336.6 63.8h0M398.6 63.8h0M404.8 63.8h0M411.0 63.8h0M417.2 63.8h0M423.4 63.8h0M429.6 63.8h0M39.0 70.0h0M45.2 70.0h0M51.4 70.0h0M57.6 70.0h0M63.8 70.0h0M70.0 70.0h0M76.2 70.0h0M82.4 70.0h0M88.6 70.0h0M94.8 70.0h0M101.0 70.0h0M107.2 70.0h0M113.4 70.0h0M119.6 70.0h0M125.8 70.0h0M132.0 70.0h0M138.2 70.0h0M144.4 70.0h0M150.6 70.0h0M156.8 70.0h0M163.0 70.0h0M169.2 70.0h0M175.4 70.0h0M181.6 70.0h0M187.8 70.0h0M194.0 70.0h0M200.2 70.0h0M206.4 70.0h0M212.6 70.0h0M218.8 70.0h0M225.0 70.0h0M231.2 70.0h0M237.4 70.0h0M243.6 70.0h0M249.8 70.0h0M256.0 70.0h0M262.2 70.0h0M268.4 70.0h0M274.6 70.0h0M280.8 70.0h0M287.0 70.0h0M293.2 70.0h0M299.4 70.0h0M305.6 70.0h0M311.8 70.0h0M318.0 70.0h0M324.2 70.0h0M330.4 70.0h0M336.6 70.0h0M342.8 70.0h0M392.4 70.0h0M398.6 70.0h0M404.8 70.0h0M411.0 70.0h0M417.2 70.0h0M423.4 70.0h0M429.6 70.0h0M39.0 76.2h0M45.2 76.2h0M51.4 76.2h0M57.6 76.2h0M63.8 76.2h0M70.0 76.2h0M76.2 76.2h0M82.4 76.2h0M88.6 76.2h0M94.8 76.2h0M101.0 76.2h0M107.2 76.2h0M113.4 76.2h0M119.6 76.2h0M125.8 76.2h0M132.0 76.2h0M138.2 76.2h0M144.4 76.2h0M150.6 76.2h0M156.8 76.2h0M163.0 76.2h0M169.2 76.2h0M175.4 76.2h0M181.6 76.2h0M187.8 76.2h0M194.0 76.2h0M200.2 76.2h0M206.4 76.2h0M212.6 76.2h0M218.8 76.2h0M225.0 76.2h0M231.2 76.2h0M237.4 76.2h0M243.6 76.2h0M249.8 76.2h0M256.0 76.2h0M262.2 76.2h0M268.4 76.2h0M274.6 76.2h0M280.8 76.2h0M287.0 76.2h0M293.2 76.2h0M299.4 76.2h0M305.6 76.2h0M311.8 76.2h0M318.0 76.2h0M324.2 76.2h0M330.4 76.2h0M336.6 76.2h0M342.8 76.2h0M386.2 76.2h0M392.4 76.2h0M398.6 76.2h0M404.8 76.2h0M411.0 76.2h0M417.2 76.2h0M423.4 76.2h0M429.6 76.2h0M32.8 82.4h0M39.0 82.4h0M45.2 82.4h0M51.4 82.4h0M57.6 82.4h0M63.8 82.4h0M70.0 82.4h0M76.2 82.4h0M82.4 82.4h0M88.6 82.4h0M94.8 82.4h0M101.0 82.4h0M107.2 82.4h0M113.4 82.4h0M119.6 82.4h0M125.8 82.4h0M132.0 82.4h0M138.2 82.4h0M144.4 82.4h0M150.6 82.4h0M156.8 82.4h0M163.0 82.4h0M169.2 82.4h0M175.4 82.4h0M181.6 82.4h0M187.8 82.4h0M194.0 82.4h0M200.2 82.4h0M206.4 82.4h0M212.6 82.4h0M218.8 82.4h0M225.0 82.4h0M231.2 82.4h0M237.4 82.4h0M243.6 82.4h0M249.8 82.4h0M256.0 82.4h0M262.2 82.4h0M268.4 82.4h0M274.6 82.4h0M280.8 82.4h0M287.0 82.4h0M293.2 82.4h0M299.4 82.4h0M305.6 82.4h0M311.8 82.4h0M318.0 82.4h0M324.2 82.4h0M330.4 82.4h0M336.6 82.4h0M342.8 82.4h0M373.8 82.4h0M380.0 82.4h0M386.2 82.4h0M392.4 82.4h0M398.6 82.4h0M404.8 82.4h0M411.0 82.4h0M417.2 82.4h0M423.4 82.4h0M429.6 82.4h0M435.8 82.4h0M32.8 88.6h0M39.0 88.6h0M45.2 88.6h0M51.4 88.6h0M57.6 88.6h0M63.8 88.6h0M70.0 88.6h0M76.2 88.6h0M82.4 88.6h0M88.6 88.6h0M94.8 88.6h0M101.0 88.6h0M107.2 88.6h0M113.4 88.6h0M119.6 88.6h0M125.8 88.6h0M132.0 88.6h0M138.2 88.6h0M144.4 88.6h0M150.6 88.6h0M156.8 88.6h0M163.0 88.6h0M169.2 88.6h0M175.4 88.6h0M181.6 88.6h0M187.8 88.6h0M194.0 88.6h0M200.2 88.6h0M206.4 88.6h0M212.6 88.6h0M218.8 88.6h0M225.0 88.6h0M231.2 88.6h0M237.4 88.6h0M243.6 88.6h0M249.8 88.6h0M256.0 88.6h0M262.2 88.6h0M268.4 88.6h0M274.6 88.6h0M280.8 88.6h0M287.0 88.6h0M293.2 88.6h0M299.4 88.6h0M305.6 88.6h0M311.8 88.6h0M318.0 88.6h0M324.2 88.6h0M330.4 88.6h0M336.6 88.6h0M342.8 88.6h0M373.8 88.6h0M380.0 88.6h0M386.2 88.6h0M392.4 88.6h0M398.6 88.6h0M404.8 88.6h0M411.0 88.6h0M417.2 88.6h0M423.4 88.6h0M429.6 88.6h0M32.8 94.8h0M39.0 94.8h0M45.2 94.8h0M51.4 94.8h0M57.6 94.8h0M63.8 94.8h0M70.0 94.8h0M76.2 94.8h0M82.4 94.8h0M88.6 94.8h0M94.8 94.8h0M101.0 94.8h0M107.2 94.8h0M113.4 94.8h0M119.6 94.8h0M125.8 94.8h0M132.0 94.8h0M138.2 94.8h0M144.4 94.8h0M150.6 94.8h0M156.8 94.8h0M163.0 94.8h0M169.2 94.8h0M175.4 94.8h0M181.6 94.8h0M187.8 94.8h0M194.0 94.8h0M200.2 94.8h0M206.4 94.8h0M212.6 94.8h0M218.8 94.8h0M225.0 94.8h0M231.2 94.8h0M237.4 94.8h0M243.6 94.8h0M249.8 94.8h0M256.0 94.8h0M262.2 94.8h0M268.4 94.8h0M274.6 94.8h0M280.8 94.8h0M287.0 94.8h0M293.2 94.8h0M299.4 94.8h0M305.6 94.8h0M311.8 94.8h0M318.0 94.8h0M324.2 94.8h0M330.4 94.8h0M336.6 94.8h0M342.8 94.8h0M367.6 94.8h0M373.8 94.8h0M380.0 94.8h0M386.2 94.8h0M392.4 94.8h0M398.6 94.8h0M404.8 94.8h0M411.0 94.8h0M417.2 94.8h0M32.8 101.0h0M39.0 101.0h0M45.2 101.0h0M51.4 101.0h0M57.6 101.0h0M63.8 101.0h0M70.0 101.0h0M76.2 101.0h0M82.4 101.0h0M88.6 101.0h0M94.8 101.0h0M101.0 101.0h0M107.2 101.0h0M113.4 101.0h0M119.6 101.0h0M125.8 101.0h0M132.0 101.0h0M138.2 101.0h0M144.4 101.0h0M150.6 101.0h0M156.8 101.0h0M163.0 101.0h0M169.2 101.0h0M175.4 101.0h0M181.6 101.0h0M187.8 101.0h0M194.0 101.0h0M200.2 101.0h0M206.4 101.0h0M212.6 101.0h0M218.8 101.0h0M225.0 101.0h0M231.2 101.0h0M237.4 101.0h0M243.6 101.0h0M249.8 101.0h0M256.0 101.0h0M262.2 101.0h0M268.4 101.0h0M274.6 101.0h0M280.8 101.0h0M287.0 101.0h0M293.2 101.0h0M299.4 101.0h0M305.6 101.0h0M311.8 101.0h0M318.0 101.0h0M324.2 101.0h0M330.4 101.0h0M336.6 101.0h0M342.8 101.0h0M355.2 101.0h0M361.4 101.0h0M367.6 101.0h0M373.8 101.0h0M380.0 101.0h0M386.2 101.0h0M392.4 101.0h0M398.6 101.0h0M404.8 101.0h0M411.0 101.0h0M32.8 107.2h0M39.0 107.2h0M45.2 107.2h0M51.4 107.2h0M57.6 107.2h0M63.8 107.2h0M70.0 107.2h0M76.2 107.2h0M82.4 107.2h0M88.6 107.2h0M94.8 107.2h0M101.0 107.2h0M107.2 107.2h0M113.4 107.2h0M119.6 107.2h0M125.8 107.2h0M132.0 107.2h0M138.2 107.2h0M144.4 107.2h0M150.6 107.2h0M156.8 107.2h0M163.0 107.2h0M169.2 107.2h0M175.4 107.2h0M181.6 107.2h0M187.8 107.2h0M194.0 107.2h0M200.2 107.2h0M206.4 107.2h0M212.6 107.2h0M218.8 107.2h0M225.0 107.2h0M231.2 107.2h0M237.4 107.2h0M243.6 107.2h0M249.8 107.2h0M256.0 107.2h0M262.2 107.2h0M268.4 107.2h0M274.6 107.2h0M280.8 107.2h0M287.0 107.2h0M293.2 107.2h0M299.4 107.2h0M305.6 107.2h0M311.8 107.2h0M318.0 107.2h0M324.2 107.2h0M330.4 107.2h0M336.6 107.2h0M342.8 107.2h0M349.0 107.2h0M355.2 107.2h0M361.4 107.2h0M367.6 107.2h0M373.8 107.2h0M380.0 107.2h0M386.2 107.2h0M392.4 107.2h0M398.6 107.2h0M404.8 107.2h0M411.0 107.2h0M32.8 113.4h0M39.0 113.4h0M45.2 113.4h0M51.4 113.4h0M57.6 113.4h0M63.8 113.4h0M70.0 113.4h0M76.2 113.4h0M82.4 113.4h0M88.6 113.4h0M94.8 113.4h0M101.0 113.4h0M107.2 113.4h0M113.4 113.4h0M119.6 113.4h0M125.8 113.4h0M132.0 113.4h0M138.2 113.4h0M144.4 113.4h0M150.6 113.4h0M156.8 113.4h0M163.0 113.4h0M169.2 113.4h0M175.4 113.4h0M181.6 113.4h0M187.8 113.4h0M194.0 113.4h0M200.2 113.4h0M206.4 113.4h0M212.6 113.4h0M218.8 113.4h0M225.0 113.4h0M231.2 113.4h0M237.4 113.4h0M243.6 113.4h0M249.8 113.4h0M256.0 113.4h0M262.2 113.4h0M268.4 113.4h0M274.6 113.4h0M280.8 113.4h0M287.0 113.4h0M293.2 113.4h0M299.4 113.4h0M305.6 113.4h0M311.8 113.4h0M318.0 113.4h0M324.2 113.4h0M330.4 113.4h0M336.6 113.4h0M342.8 113.4h0M349.0 113.4h0M355.2 113.4h0M361.4 113.4h0M367.6 113.4h0M373.8 113.4h0M380.0 113.4h0M386.2 113.4h0M392.4 113.4h0M398.6 113.4h0M404.8 113.4h0M411.0 113.4h0M39.0 119.6h0M45.2 119.6h0M51.4 119.6h0M57.6 119.6h0M63.8 119.6h0M70.0 119.6h0M76.2 119.6h0M82.4 119.6h0M88.6 119.6h0M94.8 119.6h0M101.0 119.6h0M107.2 119.6h0M113.4 119.6h0M119.6 119.6h0M125.8 119.6h0M132.0 119.6h0M138.2 119.6h0M144.4 119.6h0M150.6 119.6h0M156.8 119.6h0M163.0 119.6h0M169.2 119.6h0M175.4 119.6h0M181.6 119.6h0M187.8 119.6h0M194.0 119.6h0M200.2 119.6h0M206.4 119.6h0M212.6 119.6h0M218.8 119.6h0M225.0 119.6h0M231.2 119.6h0M237.4 119.6h0M243.6 119.6h0M249.8 119.6h0M256.0 119.6h0M262.2 119.6h0M268.4 119.6h0M274.6 119.6h0M280.8 119.6h0M287.0 119.6h0M293.2 119.6h0M299.4 119.6h0M305.6 119.6h0M311.8 119.6h0M318.0 119.6h0M324.2 119.6h0M330.4 119.6h0M336.6 119.6h0M342.8 119.6h0M349.0 119.6h0M355.2 119.6h0M361.4 119.6h0M367.6 119.6h0M373.8 119.6h0M380.0 119.6h0M386.2 119.6h0M392.4 119.6h0M398.6 119.6h0M404.8 119.6h0M39.0 125.8h0M45.2 125.8h0M51.4 125.8h0M57.6 125.8h0M63.8 125.8h0M70.0 125.8h0M76.2 125.8h0M82.4 125.8h0M88.6 125.8h0M94.8 125.8h0M101.0 125.8h0M107.2 125.8h0M113.4 125.8h0M119.6 125.8h0M125.8 125.8h0M132.0 125.8h0M138.2 125.8h0M144.4 125.8h0M150.6 125.8h0M156.8 125.8h0M163.0 125.8h0M169.2 125.8h0M175.4 125.8h0M181.6 125.8h0M187.8 125.8h0M194.0 125.8h0M200.2 125.8h0M206.4 125.8h0M212.6 125.8h0M218.8 125.8h0M225.0 125.8h0M231.2 125.8h0M237.4 125.8h0M243.6 125.8h0M249.8 125.8h0M256.0 125.8h0M262.2 125.8h0M268.4 125.8h0M274.6 125.8h0M280.8 125.8h0M287.0 125.8h0M293.2 125.8h0M299.4 125.8h0M305.6 125.8h0M311.8 125.8h0M318.0 125.8h0M324.2 125.8h0M330.4 125.8h0M336.6 125.8h0M342.8 125.8h0M349.0 125.8h0M355.2 125.8h0M361.4 125.8h0M367.6 125.8h0M373.8 125.8h0M380.0 125.8h0M386.2 125.8h0M392.4 125.8h0M398.6 125.8h0M404.8 125.8h0M39.0 132.0h0M45.2 132.0h0M51.4 132.0h0M57.6 132.0h0M63.8 132.0h0M70.0 132.0h0M76.2 132.0h0M82.4 132.0h0M88.6 132.0h0M94.8 132.0h0M101.0 132.0h0M107.2 132.0h0M113.4 132.0h0M119.6 132.0h0M125.8 132.0h0M132.0 132.0h0M138.2 132.0h0M144.4 132.0h0M150.6 132.0h0M156.8 132.0h0M163.0 132.0h0M169.2 132.0h0M175.4 132.0h0M181.6 132.0h0M187.8 132.0h0M194.0 132.0h0M200.2 132.0h0M206.4 132.0h0M212.6 132.0h0M218.8 132.0h0M225.0 132.0h0M231.2 132.0h0M237.4 132.0h0M243.6 132.0h0M249.8 132.0h0M256.0 132.0h0M262.2 132.0h0M268.4 132.0h0M274.6 132.0h0M280.8 132.0h0M287.0 132.0h0M293.2 132.0h0M299.4 132.0h0M305.6 132.0h0M311.8 132.0h0M318.0 132.0h0M324.2 132.0h0M330.4 132.0h0M336.6 132.0h0M342.8 132.0h0M349.0 132.0h0M355.2 132.0h0M361.4 132.0h0M367.6 132.0h0M373.8 132.0h0M380.0 132.0h0M386.2 132.0h0M392.4 132.0h0M398.6 132.0h0M404.8 132.0h0M39.0 138.2h0M45.2 138.2h0M51.4 138.2h0M57.6 138.2h0M63.8 138.2h0M70.0 138.2h0M76.2 138.2h0M82.4 138.2h0M88.6 138.2h0M94.8 138.2h0M101.0 138.2h0M107.2 138.2h0M113.4 138.2h0M119.6 138.2h0M125.8 138.2h0M132.0 138.2h0M138.2 138.2h0M144.4 138.2h0M150.6 138.2h0M156.8 138.2h0M163.0 138.2h0M169.2 138.2h0M175.4 138.2h0M181.6 138.2h0M187.8 138.2h0M194.0 138.2h0M200.2 138.2h0M206.4 138.2h0M212.6 138.2h0M218.8 138.2h0M225.0 138.2h0M231.2 138.2h0M237.4 138.2h0M243.6 138.2h0M249.8 138.2h0M256.0 138.2h0M262.2 138.2h0M268.4 138.2h0M274.6 138.2h0M280.8 138.2h0M287.0 138.2h0M293.2 138.2h0M299.4 138.2h0M305.6 138.2h0M311.8 138.2h0M318.0 138.2h0M324.2 138.2h0M330.4 138.2h0M336.6 138.2h0M342.8 138.2h0M349.0 138.2h0M355.2 138.2h0M361.4 138.2h0M367.6 138.2h0M373.8 138.2h0M380.0 138.2h0M386.2 138.2h0M392.4 138.2h0M398.6 138.2h0M404.8 138.2h0M39.0 144.4h0M45.2 144.4h0M51.4 144.4h0M57.6 144.4h0M63.8 144.4h0M70.0 144.4h0M76.2 144.4h0M82.4 144.4h0M88.6 144.4h0M94.8 144.4h0M101.0 144.4h0M107.2 144.4h0M113.4 144.4h0M119.6 144.4h0M125.8 144.4h0M132.0 144.4h0M138.2 144.4h0M144.4 144.4h0M150.6 144.4h0M156.8 144.4h0M163.0 144.4h0M169.2 144.4h0M175.4 144.4h0M181.6 144.4h0M187.8 144.4h0M194.0 144.4h0M200.2 144.4h0M206.4 144.4h0M212.6 144.4h0M218.8 144.4h0M225.0 144.4h0M231.2 144.4h0M237.4 144.4h0M243.6 144.4h0M249.8 144.4h0M256.0 144.4h0M262.2 144.4h0M268.4 144.4h0M274.6 144.4h0M280.8 144.4h0M287.0 144.4h0M293.2 144.4h0M299.4 144.4h0M305.6 144.4h0M311.8 144.4h0M318.0 144.4h0M324.2 144.4h0M330.4 144.4h0M336.6 144.4h0M342.8 144.4h0M349.0 144.4h0M355.2 144.4h0M361.4 144.4h0M367.6 144.4h0M373.8 144.4h0M380.0 144.4h0M386.2 144.4h0M392.4 144.4h0M398.6 144.4h0M404.8 144.4h0M39.0 150.6h0M45.2 150.6h0M51.4 150.6h0M57.6 150.6h0M63.8 150.6h0M70.0 150.6h0M76.2 150.6h0M82.4 150.6h0M88.6 150.6h0M94.8 150.6h0M101.0 150.6h0M107.2 150.6h0M113.4 150.6h0M119.6 150.6h0M125.8 150.6h0M132.0 150.6h0M138.2 150.6h0M144.4 150.6h0M150.6 150.6h0M156.8 150.6h0M163.0 150.6h0M169.2 150.6h0M175.4 150.6h0M181.6 150.6h0M187.8 150.6h0M194.0 150.6h0M200.2 150.6h0M206.4 150.6h0M212.6 150.6h0M218.8 150.6h0M225.0 150.6h0M231.2 150.6h0M237.4 150.6h0M243.6 150.6h0M249.8 150.6h0M256.0 150.6h0M262.2 150.6h0M268.4 150.6h0M274.6 150.6h0M280.8 150.6h0M287.0 150.6h0M293.2 150.6h0M299.4 150.6h0M305.6 150.6h0M311.8 150.6h0M318.0 150.6h0M324.2 150.6h0M330.4 150.6h0M336.6 150.6h0M342.8 150.6h0M349.0 150.6h0M355.2 150.6h0M361.4 150.6h0M367.6 150.6h0M373.8 150.6h0M380.0 150.6h0M386.2 150.6h0M392.4 150.6h0M398.6 150.6h0M404.8 150.6h0M411.0 150.6h0M45.2 156.8h0M51.4 156.8h0M57.6 156.8h0M63.8 156.8h0M70.0 156.8h0M76.2 156.8h0M82.4 156.8h0M88.6 156.8h0M94.8 156.8h0M101.0 156.8h0M107.2 156.8h0M113.4 156.8h0M119.6 156.8h0M125.8 156.8h0M132.0 156.8h0M138.2 156.8h0M144.4 156.8h0M150.6 156.8h0M156.8 156.8h0M163.0 156.8h0M169.2 156.8h0M175.4 156.8h0M181.6 156.8h0M187.8 156.8h0M194.0 156.8h0M200.2 156.8h0M206.4 156.8h0M212.6 156.8h0M218.8 156.8h0M225.0 156.8h0M231.2 156.8h0M237.4 156.8h0M243.6 156.8h0M249.8 156.8h0M256.0 156.8h0M262.2 156.8h0M268.4 156.8h0M274.6 156.8h0M280.8 156.8h0M287.0 156.8h0M293.2 156.8h0M299.4 156.8h0M305.6 156.8h0M311.8 156.8h0M318.0 156.8h0M324.2 156.8h0M330.4 156.8h0M336.6 156.8h0M342.8 156.8h0M349.0 156.8h0M355.2 156.8h0M361.4 156.8h0M367.6 156.8h0M373.8 156.8h0M380.0 156.8h0M386.2 156.8h0M392.4 156.8h0M398.6 156.8h0M404.8 156.8h0M411.0 156.8h0M51.4 163.0h0M57.6 163.0h0M63.8 163.0h0M70.0 163.0h0M76.2 163.0h0M82.4 163.0h0M88.6 163.0h0M94.8 163.0h0M101.0 163.0h0M107.2 163.0h0M113.4 163.0h0M119.6 163.0h0M125.8 163.0h0M132.0 163.0h0M138.2 163.0h0M144.4 163.0h0M150.6 163.0h0M156.8 163.0h0M163.0 163.0h0M169.2 163.0h0M175.4 163.0h0M181.6 163.0h0M187.8 163.0h0M194.0 163.0h0M200.2 163.0h0M206.4 163.0h0M212.6 163.0h0M218.8 163.0h0M225.0 163.0h0M231.2 163.0h0M237.4 163.0h0M243.6 163.0h0M249.8 163.0h0M256.0 163.0h0M262.2 163.0h0M268.4 163.0h0M274.6 163.0h0M280.8 163.0h0M287.0 163.0h0M293.2 163.0h0M299.4 163.0h0M305.6 163.0h0M311.8 163.0h0M318.0 163.0h0M324.2 163.0h0M330.4 163.0h0M336.6 163.0h0M342.8 163.0h0M349.0 163.0h0M355.2 163.0h0M361.4 163.0h0M367.6 163.0h0M373.8 163.0h0M380.0 163.0h0M386.2 163.0h0M392.4 163.0h0M398.6 163.0h0M404.8 163.0h0M57.6 169.2h0M63.8 169.2h0M70.0 169.2h0M76.2 169.2h0M82.4 169.2h0M88.6 169.2h0M94.8 169.2h0M101.0 169.2h0M107.2 169.2h0M113.4 169.2h0M119.6 169.2h0M125.8 169.2h0M132.0 169.2h0M138.2 169.2h0M144.4 169.2h0M150.6 169.2h0M156.8 169.2h0M163.0 169.2h0M169.2 169.2h0M175.4 169.2h0M181.6 169.2h0M187.8 169.2h0M194.0 169.2h0M200.2 169.2h0M206.4 169.2h0M212.6 169.2h0M218.8 169.2h0M225.0 169.2h0M231.2 169.2h0M237.4 169.2h0M243.6 169.2h0M249.8 169.2h0M256.0 169.2h0M262.2 169.2h0M268.4 169.2h0M274.6 169.2h0M280.8 169.2h0M287.0 169.2h0M293.2 169.2h0M299.4 169.2h0M305.6 169.2h0M311.8 169.2h0M318.0 169.2h0M324.2 169.2h0M330.4 169.2h0M336.6 169.2h0M342.8 169.2h0M349.0 169.2h0M355.2 169.2h0M361.4 169.2h0M367.6 169.2h0M373.8 169.2h0M380.0 169.2h0M386.2 169.2h0M392.4 169.2h0M398.6 169.2h0M63.8 175.4h0M70.0 175.4h0M76.2 175.4h0M82.4 175.4h0M88.6 175.4h0M94.8 175.4h0M101.0 175.4h0M107.2 175.4h0M113.4 175.4h0M119.6 175.4h0M125.8 175.4h0M132.0 175.4h0M138.2 175.4h0M144.4 175.4h0M150.6 175.4h0M156.8 175.4h0M163.0 175.4h0M169.2 175.4h0M175.4 175.4h0M181.6 175.4h0M187.8 175.4h0M194.0 175.4h0M200.2 175.4h0M206.4 175.4h0M212.6 175.4h0M218.8 175.4h0M225.0 175.4h0M231.2 175.4h0M237.4 175.4h0M243.6 175.4h0M249.8 175.4h0M256.0 175.4h0M262.2 175.4h0M268.4 175.4h0M274.6 175.4h0M280.8 175.4h0M287.0 175.4h0M293.2 175.4h0M299.4 175.4h0M305.6 175.4h0M311.8 175.4h0M318.0 175.4h0M324.2 175.4h0M330.4 175.4h0M336.6 175.4h0M342.8 175.4h0M349.0 175.4h0M355.2 175.4h0M361.4 175.4h0M367.6 175.4h0M373.8 175.4h0M380.0 175.4h0M386.2 175.4h0M392.4 175.4h0M63.8 181.6h0M70.0 181.6h0M76.2 181.6h0M82.4 181.6h0M88.6 181.6h0M94.8 181.6h0M101.0 181.6h0M107.2 181.6h0M113.4 181.6h0M119.6 181.6h0M125.8 181.6h0M132.0 181.6h0M138.2 181.6h0M144.4 181.6h0M150.6 181.6h0M156.8 181.6h0M163.0 181.6h0M169.2 181.6h0M175.4 181.6h0M181.6 181.6h0M187.8 181.6h0M194.0 181.6h0M200.2 181.6h0M206.4 181.6h0M212.6 181.6h0M218.8 181.6h0M225.0 181.6h0M231.2 181.6h0M237.4 181.6h0M243.6 181.6h0M249.8 181.6h0M256.0 181.6h0M262.2 181.6h0M268.4 181.6h0M274.6 181.6h0M280.8 181.6h0M287.0 181.6h0M293.2 181.6h0M299.4 181.6h0M305.6 181.6h0M311.8 181.6h0M318.0 181.6h0M324.2 181.6h0M330.4 181.6h0M336.6 181.6h0M342.8 181.6h0M349.0 181.6h0M355.2 181.6h0M361.4 181.6h0M367.6 181.6h0M373.8 181.6h0M380.0 181.6h0M386.2 181.6h0M82.4 187.8h0M88.6 187.8h0M94.8 187.8h0M101.0 187.8h0M107.2 187.8h0M113.4 187.8h0M119.6 187.8h0M125.8 187.8h0M132.0 187.8h0M138.2 187.8h0M144.4 187.8h0M150.6 187.8h0M156.8 187.8h0M163.0 187.8h0M169.2 187.8h0M175.4 187.8h0M181.6 187.8h0M187.8 187.8h0M194.0 187.8h0M200.2 187.8h0M206.4 187.8h0M212.6 187.8h0M218.8 187.8h0M225.0 187.8h0M231.2 187.8h0M237.4 187.8h0M243.6 187.8h0M249.8 187.8h0M256.0 187.8h0M262.2 187.8h0M268.4 187.8h0M274.6 187.8h0M280.8 187.8h0M287.0 187.8h0M293.2 187.8h0M299.4 187.8h0M305.6 187.8h0M311.8 187.8h0M318.0 187.8h0M324.2 187.8h0M330.4 187.8h0M336.6 187.8h0M342.8 187.8h0M349.0 187.8h0M355.2 187.8h0M361.4 187.8h0M367.6 187.8h0M373.8 187.8h0M380.0 187.8h0M386.2 187.8h0M94.8 194.0h0M101.0 194.0h0M107.2 194.0h0M113.4 194.0h0M119.6 194.0h0M125.8 194.0h0M132.0 194.0h0M138.2 194.0h0M144.4 194.0h0M150.6 194.0h0M156.8 194.0h0M163.0 194.0h0M169.2 194.0h0M175.4 194.0h0M181.6 194.0h0M187.8 194.0h0M194.0 194.0h0M200.2 194.0h0M206.4 194.0h0M212.6 194.0h0M218.8 194.0h0M225.0 194.0h0M231.2 194.0h0M237.4 194.0h0M243.6 194.0h0M249.8 194.0h0M256.0 194.0h0M262.2 194.0h0M268.4 194.0h0M274.6 194.0h0M280.8 194.0h0M287.0 194.0h0M293.2 194.0h0M299.4 194.0h0M305.6 194.0h0M311.8 194.0h0M318.0 194.0h0M324.2 194.0h0M330.4 194.0h0M336.6 194.0h0M342.8 194.0h0M349.0 194.0h0M355.2 194.0h0M361.4 194.0h0M367.6 194.0h0M373.8 194.0h0M380.0 194.0h0M107.2 200.2h0M113.4 200.2h0M119.6 200.2h0M125.8 200.2h0M132.0 200.2h0M138.2 200.2h0M144.4 200.2h0M150.6 200.2h0M156.8 200.2h0M163.0 200.2h0M169.2 200.2h0M175.4 200.2h0M181.6 200.2h0M187.8 200.2h0M194.0 200.2h0M200.2 200.2h0M206.4 200.2h0M212.6 200.2h0M218.8 200.2h0M225.0 200.2h0M231.2 200.2h0M237.4 200.2h0M243.6 200.2h0M249.8 200.2h0M256.0 200.2h0M262.2 200.2h0M268.4 200.2h0M274.6 200.2h0M280.8 200.2h0M287.0 200.2h0M293.2 200.2h0M299.4 200.2h0M305.6 200.2h0M311.8 200.2h0M318.0 200.2h0M324.2 200.2h0M330.4 200.2h0M336.6 200.2h0M342.8 200.2h0M349.0 200.2h0M355.2 200.2h0M361.4 200.2h0M367.6 200.2h0M373.8 200.2h0M113.4 206.4h0M119.6 206.4h0M125.8 206.4h0M132.0 206.4h0M138.2 206.4h0M150.6 206.4h0M156.8 206.4h0M163.0 206.4h0M169.2 206.4h0M175.4 206.4h0M181.6 206.4h0M187.8 206.4h0M194.0 206.4h0M200.2 206.4h0M206.4 206.4h0M212.6 206.4h0M218.8 206.4h0M225.0 206.4h0M231.2 206.4h0M237.4 206.4h0M243.6 206.4h0M249.8 206.4h0M256.0 206.4h0M262.2 206.4h0M268.4 206.4h0M274.6 206.4h0M280.8 206.4h0M287.0 206.4h0M293.2 206.4h0M299.4 206.4h0M305.6 206.4h0M311.8 206.4h0M318.0 206.4h0M324.2 206.4h0M330.4 206.4h0M336.6 206.4h0M342.8 206.4h0M349.0 206.4h0M355.2 206.4h0M361.4 206.4h0M367.6 206.4h0M373.8 206.4h0M156.8 212.6h0M163.0 212.6h0M169.2 212.6h0M175.4 212.6h0M181.6 212.6h0M187.8 212.6h0M194.0 212.6h0M200.2 212.6h0M206.4 212.6h0M212.6 212.6h0M218.8 212.6h0M225.0 212.6h0M231.2 212.6h0M237.4 212.6h0M243.6 212.6h0M249.8 212.6h0M256.0 212.6h0M262.2 212.6h0M268.4 212.6h0M274.6 212.6h0M280.8 212.6h0M287.0 212.6h0M293.2 212.6h0M299.4 212.6h0M305.6 212.6h0M311.8 212.6h0M318.0 212.6h0M324.2 212.6h0M330.4 212.6h0M336.6 212.6h0M342.8 212.6h0M349.0 212.6h0M355.2 212.6h0M361.4 212.6h0M367.6 212.6h0M373.8 212.6h0M163.0 218.8h0M169.2 218.8h0M175.4 218.8h0M181.6 218.8h0M187.8 218.8h0M194.0 218.8h0M200.2 218.8h0M206.4 218.8h0M212.6 218.8h0M218.8 218.8h0M225.0 218.8h0M231.2 218.8h0M237.4 218.8h0M243.6 218.8h0M249.8 218.8h0M256.0 218.8h0M262.2 218.8h0M268.4 218.8h0M274.6 218.8h0M280.8 218.8h0M287.0 218.8h0M293.2 218.8h0M299.4 218.8h0M305.6 218.8h0M311.8 218.8h0M318.0 218.8h0M324.2 218.8h0M330.4 218.8h0M336.6 218.8h0M342.8 218.8h0M349.0 218.8h0M355.2 218.8h0M361.4 218.8h0M367.6 218.8h0M373.8 218.8h0M169.2 225.0h0M175.4 225.0h0M181.6 225.0h0M187.8 225.0h0M194.0 225.0h0M200.2 225.0h0M206.4 225.0h0M212.6 225.0h0M218.8 225.0h0M225.0 225.0h0M231.2 225.0h0M237.4 225.0h0M243.6 225.0h0M249.8 225.0h0M256.0 225.0h0M262.2 225.0h0M268.4 225.0h0M274.6 225.0h0M280.8 225.0h0M287.0 225.0h0M293.2 225.0h0M299.4 225.0h0M305.6 225.0h0M311.8 225.0h0M336.6 225.0h0M342.8 225.0h0M355.2 225.0h0M361.4 225.0h0M367.6 225.0h0M373.8 225.0h0M169.2 231.2h0M175.4 231.2h0M181.6 231.2h0M194.0 231.2h0M200.2 231.2h0M206.4 231.2h0M212.6 231.2h0M218.8 231.2h0M225.0 231.2h0M231.2 231.2h0M237.4 231.2h0M243.6 231.2h0M249.8 231.2h0M256.0 231.2h0M262.2 231.2h0M268.4 231.2h0M274.6 231.2h0M280.8 231.2h0M287.0 231.2h0M293.2 231.2h0M299.4 231.2h0M367.6 231.2h0M373.8 231.2h0M380.0 231.2h0M181.6 237.4h0M200.2 237.4h0M206.4 237.4h0M212.6 237.4h0M218.8 237.4h0M225.0 237.4h0M231.2 237.4h0M237.4 237.4h0M243.6 237.4h0M249.8 237.4h0M256.0 237.4h0M293.2 237.4h0M299.4 237.4h0M305.6 237.4h0M367.6 237.4h0M373.8 237.4h0M380.0 237.4h0M206.4 243.6h0M212.6 243.6h0M218.8 243.6h0M225.0 243.6h0M231.2 243.6h0M237.4 243.6h0M243.6 243.6h0M367.6 243.6h0M373.8 243.6h0M380.0 243.6h0M386.2 243.6h0M212.6 249.8h0M218.8 249.8h0M225.0 249.8h0M231.2 249.8h0M237.4 249.8h0M373.8 249.8h0M380.0 249.8h0M386.2 249.8h0M212.6 256.0h0M218.8 256.0h0M225.0 256.0h0M231.2 256.0h0M373.8 256.0h0M380.0 256.0h0M386.2 256.0h0M392.4 256.0h0M218.8 262.2h0M225.0 262.2h0M231.2 262.2h0M380.0 262.2h0M386.2 262.2h0M392.4 262.2h0M225.0 268.4h0M231.2 268.4h0" fill="none" stroke="#CDD2D7" stroke-width="3.6" stroke-linecap="round"/><circle cx="237.9" cy="202.0" r="3.2" fill="#E8A33D" opacity=".9"/><circle cx="368.5" cy="243.2" r="3.2" fill="#F2CB82" opacity=".9"/><circle cx="174.1" cy="126.1" r="3.2" fill="#F2CB82" opacity=".9"/><circle cx="250.4" cy="233.4" r="3.2" fill="#E8A33D" opacity=".9"/><circle cx="87.6" cy="150.8" r="3.2" fill="#E8A33D" opacity=".9"/><circle cx="256.1" cy="136.0" r="3.2" fill="#F2CB82" opacity=".9"/><circle cx="320.9" cy="163.1" r="3.2" fill="#F2CB82" opacity=".9"/><circle cx="222.4" cy="236.6" r="3.2" fill="#F2CB82" opacity=".9"/><circle class="pulse" cx="107.8" cy="183.5" r="7" fill="none" stroke="#E5604D" stroke-width="1.5"/><circle cx="107.8" cy="183.5" r="6.0" fill="#E5604D" stroke="#1F2329" stroke-width="1.3"/><text x="118.8" y="187.5" text-anchor="start" class="mlab">Phoenix · 41%</text><circle cx="346.6" cy="120.2" r="5.2" fill="#E8A33D" stroke="#1F2329" stroke-width="1.3"/><text x="342.6" y="109.2" text-anchor="end" class="mlab">Columbus · 27%</text><circle cx="371.2" cy="166.4" r="4.6" fill="#F2CB82" stroke="#1F2329" stroke-width="1.3"/><text x="373.2" y="184.4" text-anchor="middle" class="mlab">Charlotte · 12%</text></svg></div>
-              <div class="legend"><span>Distress risk by market</span><span class="lg">Low <i style="background:#F2CB82"></i><i style="background:#E8A33D"></i><i style="background:#E5604D"></i> High</span></div>
-            </div>
-          </div>
-          <div class="body">
-            <div class="step">01 · Find</div>
-            <h3>Search by distress, in plain language</h3>
-            <ul><li>Special servicing, delinquency, maturities, tax and code signals, stacked</li><li>A 12-month risk estimate with the top drivers</li><li>Map, radius and polygon search, and saved lists that refresh</li></ul>
-          </div>
-        </article>
-
-        <article class="tile t-owner">
-          <div class="vis">
-            <div class="chain">
-              <div class="node">Harbor Pointe Apartments LLC<small>Owner of record</small></div>
-              <div class="arrow">↑ owned by</div>
-              <div class="node">Lakeshore Holdings LP<small>Holding entity</small></div>
-              <div class="arrow">↑ controlled by</div>
-              <div class="node hl">Lakeshore Capital Partners<small>Sponsor · 7 properties · 1,420 units</small></div>
-            </div>
-            <div class="contacts"><span><b></b>Asset manager · phone<em>High confidence</em></span><span><b class="m"></b>Property manager · email<em>Medium</em></span></div>
-          </div>
-          <div class="body">
-            <div class="step">02 · Know the owner</div>
-            <h3>The LLC, the sponsor and who to call</h3>
-            <ul><li>Roll up every property an owner or sponsor controls</li><li>Contacts with a confidence rating and do-not-call flags</li><li>The lender and the special servicer, with contacts</li></ul>
-          </div>
-        </article>
-
-        <article class="tile t-alert">
-          <div class="vis">
-            <div class="feed">
-              <div class="al"><b class="r"></b><span><strong>Willowbrook Commons</strong> moved to special servicing<small>2 hours ago</small></span></div>
-              <div class="al"><b class="a"></b><span><strong>Harbor Pointe</strong> maturity now inside 12 months<small>Yesterday</small></span></div>
-              <div class="al"><b class="a"></b><span><strong>The Ridgeline</strong> new tax lien recorded<small>Nov 22</small></span></div>
-            </div>
-            <div class="via"><span>Email</span><span>Push</span><span>Webhook</span></div>
-          </div>
-          <div class="body">
-            <div class="step">03 · Stay ahead</div>
-            <h3>Know the day it changes</h3>
-            <ul><li>Alerts on servicing transfers, maturities and new filings</li><li>A maturity calendar by quarter for your markets</li></ul>
-          </div>
-        </article>
-
-        <article class="tile t-reach">
-          <div class="vis">
-            <div class="call"><span class="ph">☎</span><span><strong>AI voice · voicemail left</strong><small>Willowbrook Commons · 0:42</small></span></div>
-            <div class="wave"><i style="height:8px;animation-delay:0ms"></i><i style="height:14px;animation-delay:60ms"></i><i style="height:22px;animation-delay:120ms"></i><i style="height:12px;animation-delay:180ms"></i><i style="height:26px;animation-delay:240ms"></i><i style="height:18px;animation-delay:300ms"></i><i style="height:10px;animation-delay:360ms"></i><i style="height:24px;animation-delay:420ms"></i><i style="height:30px;animation-delay:480ms"></i><i style="height:16px;animation-delay:540ms"></i><i style="height:9px;animation-delay:600ms"></i><i style="height:20px;animation-delay:660ms"></i><i style="height:28px;animation-delay:720ms"></i><i style="height:14px;animation-delay:780ms"></i><i style="height:22px;animation-delay:840ms"></i><i style="height:10px;animation-delay:0ms"></i><i style="height:18px;animation-delay:60ms"></i><i style="height:26px;animation-delay:120ms"></i><i style="height:12px;animation-delay:180ms"></i><i style="height:8px;animation-delay:240ms"></i><i style="height:16px;animation-delay:300ms"></i><i style="height:22px;animation-delay:360ms"></i><i style="height:10px;animation-delay:420ms"></i><i style="height:6px;animation-delay:480ms"></i></div>
-            <div class="sent">✓ Follow-up text sent with your details</div>
-          </div>
-          <div class="body">
-            <div class="step">04 · Reach out</div>
-            <h3>Start the conversation</h3>
-            <ul><li>AI voice calls and voicemails from a list and script you approve</li><li>Email, text and mail sequences</li><li>One activity log for the whole team</li></ul>
-          </div>
-        </article>
-
-        <article class="tile t-decide">
-          <div class="vis">
-            <div class="handoff"><span>Willowbrook Commons</span><span class="go2">Underwrite →</span></div>
-            <div class="mini">
-              <div><small>Max bid</small><b>$31.2M</b></div>
-              <div><small>Levered IRR</small><b>17.4%</b></div>
-              <div><small>Going-in cap</small><b>6.8%</b></div>
-            </div>
-            <div class="tag-ok">Opened in Teez · pre-filled from the asset</div>
-          </div>
-          <div class="body">
-            <div class="step">05 · Decide</div>
-            <h3>From lead to priced bid</h3>
-            <ul><li>One-click underwriting in <a href="https://teez.ai" style="text-decoration:underline;text-underline-offset:3px">Teez</a></li><li>Comps, tax and loan history on one page per asset</li><li>Export to Excel or your CRM, plus an API and MCP server</li></ul>
-          </div>
-        </article>
-
-      </div>
+      <div class="cta"><a class="btn" href="#early-access">Get early access</a></div>
     </div></div>
 
     <div class="blk" id="signals"><div class="wrap">
       <h2>The signals behind every score.</h2>
       <p class="lede">Public and open sources, joined to the property and the owner.</p>
-      <div class="xl"><div class="scroll-x"><table style="min-width:640px">
-        <thead><tr><th>Signal</th><th>What it is</th></tr></thead>
-        <tbody>
-          <tr><td><b>Distress model</b></td><td class="why">Estimates 12-month risk from the signals below, trained and tested on historical loan outcomes.</td></tr>
-          <tr><td><b>CMBS delinquency &amp; special servicing</b></td><td class="why">Loan-level performance data from SEC filings: payment status, servicer transfers, maturity.</td></tr>
-          <tr><td><b>Agency loan maturities</b></td><td class="why">Fannie Mae and Freddie Mac multifamily loan data, matched to properties.</td></tr>
-          <tr><td><b>Code violations</b></td><td class="why">Open-data violation records from major cities, tied to the parcel.</td></tr>
-          <tr><td><b>Property tax delinquency</b></td><td class="why">County treasurer data on delinquent and tax-sale properties.</td></tr>
-          <tr><td><b>Foreclosure &amp; court filings</b></td><td class="why">Notices of default, lis pendens and receiverships from county and court records.</td></tr>
-        </tbody>
-      </table></div></div>
+      <div class="icons">
+<div class="it"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16M15 10h4a1 1 0 0 1 1 1v10M2.5 21h19M8 8h3M8 12h3M8 16h3"/></svg></span><h3>CMBS delinquency &amp; special servicing</h3><p>Payment status, servicer transfers, maturity.</p></div>
+<div class="it"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4M12 13v3h2.5"/></svg></span><h3>Agency loan maturities</h3><p>Fannie Mae and Freddie Mac loans.</p></div>
+<div class="it"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4 21.5 20h-19L12 4zM12 10v4.5M12 17.3v.2"/></svg></span><h3>Code violations</h3><p>City open-data records, tied to the parcel.</p></div>
+<div class="it"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-2-1.4-2 1.4-2-1.4-2 1.4-2-1.4L6 21V3zM9 8h6M9 12h6M9 16h3"/></svg></span><h3>Property tax delinquency</h3><p>County treasurer and tax-sale data.</p></div>
+<div class="it"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 8 5-5 5 5-5 5-5-5zM11.5 10.500 4 18M3 21h11"/></svg></span><h3>Foreclosure &amp; court filings</h3><p>Defaults, lis pendens, receiverships.</p></div>
+      </div>
     </div></div>
 
-    <div class="blk" id="principles"><div class="wrap">
+    <div class="blk soft" id="principles"><div class="wrap">
       <h2>Built to be trusted.</h2>
-      <div class="xl"><div class="scroll-x"><table style="min-width:640px">
-        <thead><tr><th>Principle</th><th>What it means for you</th></tr></thead>
-        <tbody>
-          <tr><td><b>Source and date on every field</b></td><td class="why">You can see where a number came from and how fresh it is before you act on it.</td></tr>
-          <tr><td><b>A published track record</b></td><td class="why">We show how the model performed on past outcomes, and which model version produced each score. No claim without a test behind it.</td></tr>
-          <tr><td><b>No guessed contacts</b></td><td class="why">Owner and sponsor contact details carry a confidence flag. We don't invent emails or phone numbers.</td></tr>
-          <tr><td><b>Honest coverage</b></td><td class="why">We show which markets and loan types are covered, and which aren't, so a blank isn't mistaken for "no distress."</td></tr>
-          <tr><td><b>Made for acquisition teams</b></td><td class="why">Multifamily first. Built for people sourcing deals, not for analysts writing reports.</td></tr>
-        </tbody>
-      </table></div></div>
+      <div class="icons">
+<div class="it"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></svg></span><h3>Source and date on every field</h3><p>Know where a number came from and how fresh it is.</p></div>
+<div class="it"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4v16h16M7.500 15l3.500-4 3 2.500 5-6.500"/></svg></span><h3>A published track record</h3><p>How the model did on past outcomes, by version.</p></div>
+<div class="it"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M3 20c.800-3.800 3.500-6 7-6 1.500 0 2.800.400 3.900 1.100M14.500 18.500l2.200 2.200 4.300-4.500"/></svg></span><h3>No guessed contacts</h3><p>Rated for confidence. If we don’t have it, it stays blank.</p></div>
+<div class="it"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2.5 12S6 5.500 12 5.500 21.500 12 21.500 12 18 18.500 12 18.500 2.500 12 2.500 12z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Honest coverage</h3><p>A blank is never mistaken for “no distress”.</p></div>
+<div class="it"><span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8.500" r="3.500"/><path d="M2.500 20c.700-3.500 3.200-5.500 6.500-5.500s5.800 2 6.500 5.500M16 5.500a3.500 3.500 0 0 1 0 6.500M18 14.800c1.800.800 3 2.600 3.500 5.200"/></svg></span><h3>Made for acquisition teams</h3><p>Multifamily first, built for sourcing deals.</p></div>
+      </div>
+    </div></div>
+
+    <div class="blk" id="bid"><div class="wrap">
+      <h2>From a signal to a priced bid.</h2>
+      <p class="lede">Most distress tools stop at a list. Teez is built around what an acquisitions team does next.</p>
+      <div class="g3">
+        <div class="cell"><div class="n">=DETECT()</div><h3>Signals, joined</h3><p>Loan status, tax and code data are matched to the same parcel and owner entity, so you see one property, not five scattered records.</p></div>
+        <div class="cell"><div class="n">=PREDICT()</div><h3>A model that shows its work</h3><p>Trained on past loan outcomes to estimate each property's chance of distress, with the top drivers behind every number. No black box, nothing you can't defend to an investment committee.</p></div>
+        <div class="cell"><div class="n">=UNDERWRITE()</div><h3>Straight into underwriting</h3><p>Send a lead to <a href="https://teez.ai" style="text-decoration:underline;text-underline-offset:3px">Teez</a> and open it as a pre-filled model, so a lead becomes a priced bid in one step.</p></div>
+      </div>
     </div></div>
 
     <div class="blk" id="watchlist"><div class="wrap">
@@ -495,7 +315,7 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
     </div></div>
 
     <footer><div class="wrap foot">
-      <span>© Teez Live. Looking for AI underwriting? <a href="https://teez.ai">teez.ai</a></span>
+      <span>© Teez. Looking for AI underwriting? <a href="https://teez.ai">teez.ai</a></span>
       <span>Questions: <a href="mailto:hello@teez.live">hello@teez.live</a></span>
     </div></footer>
   </main>
@@ -503,7 +323,7 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
 
 <div class="bottom">
   <nav class="tabs" id="tabs">
-    <a href="#agent" class="act">Agent</a><a href="#how">How it works</a><a href="#features">Features</a><a href="#signals">Signals</a><a href="#principles">Principles</a><a href="#watchlist">Watchlist</a><a href="#early-access">Early access</a>
+    <a href="#agent" class="act">How it works</a><a href="#signals">Signals</a><a href="#principles">Principles</a><a href="#watchlist">Watchlist</a><a href="#early-access">Early access</a>
   </nav>
   <div class="status-bar"><span>Ready</span><span>Updated Nov 24, 2026</span></div>
 </div>
@@ -516,42 +336,36 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
   if (matchMedia('(prefers-reduced-motion:reduce)').matches) render(text);
   else (function tick(){ render(text.slice(0, i)); if (i++ < text.length) setTimeout(tick, 55); })();
 
-  // hero agent: type the request, send, work, answer, repeat
+  // hero stage: one scene at a time, loops while on screen
   (function(){
-    if (matchMedia('(prefers-reduced-motion:reduce)').matches) return;
-    var msg = document.getElementById('agmsg'), res = document.getElementById('agres'), typed = document.getElementById('agtype'),
-        send = document.getElementById('agsend'), steps = [].slice.call(document.querySelectorAll('#agsteps li')),
-        box = typed.parentNode, q = msg.textContent;
-    function wait(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
-    function show(el){ el.classList.remove('hide'); el.classList.add('pop'); }
-    function hide(el){ el.classList.add('hide'); el.classList.remove('pop'); }
-    async function run(){
-      for (;;) {
-        hide(msg); hide(res); steps.forEach(function(li){ hide(li); li.classList.remove('done'); }); typed.textContent = '';
-        box.classList.remove('typing-on');
-        await wait(900);
-        box.classList.add('typing-on');
-        for (var i = 1; i <= q.length; i++) { typed.textContent = q.slice(0, i); await wait(34); }
-        await wait(450);
-        send.classList.add('press'); await wait(180); send.classList.remove('press');
-        typed.textContent = ''; box.classList.remove('typing-on'); show(msg);
-        for (var k = 0; k < steps.length; k++) { await wait(250); show(steps[k]); await wait(750); steps[k].classList.add('done'); }
-        await wait(250); show(res);
-        await wait(5500);
-      }
+    var stage = document.getElementById('stage'), btns = [].slice.call(stage.querySelectorAll('.steps button')),
+        scenes = [].slice.call(stage.querySelectorAll('.scene')), typed = document.getElementById('agtype'),
+        send = document.getElementById('agsend'), q = typed.textContent, dur = [4600, 5600, 5200, 4600, 4600, 5000],
+        cur = 0, timers = [], visible = false, still = matchMedia('(prefers-reduced-motion:reduce)').matches;
+    function later(fn, ms){ timers.push(setTimeout(fn, ms)); }
+    function clear(){ timers.forEach(clearTimeout); timers = []; }
+    function show(n){
+      clear(); cur = n;
+      scenes.forEach(function(el, k){ el.classList.toggle('on', k === n); });
+      btns.forEach(function(b, k){ b.classList.remove('on'); b.style.setProperty('--t', dur[k] + 'ms'); });
+      void stage.offsetWidth; btns[n].classList.add('on');
+      if (still) return;
+      if (n === 0) {
+        typed.textContent = '';
+        var i = 0;
+        (function type(){ typed.textContent = q.slice(0, ++i); if (i < q.length) later(type, 34); })();
+        later(function(){ send.classList.add('press'); }, dur[0] - 450);
+        later(function(){ send.classList.remove('press'); }, dur[0] - 200);
+      } else typed.textContent = q;
+      if (visible) later(function(){ show((cur + 1) % scenes.length); }, dur[n]);
     }
-    run();
-  })();
-
-  // how it works: light the steps one after another while on screen
-  (function(){
-    var flow = document.getElementById('flow'), fs = [].slice.call(flow.querySelectorAll('.fs')), fill = document.getElementById('railfill'), cur = -1, timer;
-    function set(n){ cur = n; fs.forEach(function(f, k){ f.classList.toggle('on', k === n); f.classList.toggle('past', k < n); }); fill.style.width = (n / (fs.length - 1) * 100) + '%'; }
-    if (matchMedia('(prefers-reduced-motion:reduce)').matches) { fs.forEach(function(f){ f.classList.add('past'); }); fill.style.width = '100%'; return; }
+    btns.forEach(function(b, k){ b.addEventListener('click', function(){ show(k); }); });
+    if (still) return;
     new IntersectionObserver(function(en){
-      if (en[0].isIntersecting) { if (!timer) { set(0); timer = setInterval(function(){ set((cur + 1) % fs.length); }, 2200); } }
-      else { clearInterval(timer); timer = null; }
-    }, { threshold: 0.15 }).observe(flow);
+      var v = en[0].isIntersecting;
+      if (v && !visible) { visible = true; show(cur); }
+      else if (!v && visible) { visible = false; clear(); }
+    }, { threshold: 0.2 }).observe(stage);
   })();
 
   // row-number gutter
