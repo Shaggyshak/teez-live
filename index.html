@@ -145,6 +145,90 @@ td.ft{width:30%;font-weight:600}
 @media (max-width:980px){.bento{grid-template-columns:1fr 1fr}.t-find,.t-owner{grid-column:span 2}.t-alert,.t-reach,.t-decide{grid-column:span 1}.t-decide{grid-column:span 2}}
 @media (max-width:640px){.bento{grid-template-columns:1fr}.t-find,.t-owner,.t-alert,.t-reach,.t-decide{grid-column:span 1}}
 @media (prefers-reduced-motion:reduce){.wave i{animation:none}}
+
+/* hero agent */
+.hero-c{text-align:center}
+.hero-c h1,.hero-c .sub{margin-left:auto;margin-right:auto}
+.hero-c .cta{justify-content:center}
+.agent{margin:34px auto 0;max-width:760px;text-align:left;background:#15191D;color:#E8EAED;border:1px solid #2C3238;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px -24px rgba(16,124,65,.45),0 0 0 6px rgba(16,124,65,.07)}
+.ag-top{display:flex;align-items:center;gap:9px;padding:11px 16px;border-bottom:1px solid #2C3238;font-weight:700;font-size:15px}
+.ag-top img{width:20px;height:20px}
+.ag-on{margin-left:auto;font-family:var(--mono);font-size:11px;color:#5BD18B;font-weight:400}
+.ag-on::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#5BD18B;margin-right:6px}
+.ag-log{height:372px;padding:16px;overflow:hidden}
+.msg{margin-left:auto;width:fit-content;max-width:85%;background:#107C41;color:#fff;padding:9px 13px;border-radius:12px 12px 3px 12px;font-size:15px}
+.ag-steps{list-style:none;margin:12px 0;font-family:var(--mono);font-size:12.5px;color:#9AA0A6}
+.ag-steps li{display:flex;align-items:center;gap:9px;padding:2px 0}
+.ag-steps li::before{content:"";flex:none;width:11px;height:11px;border-radius:50%;border:2px solid #3A4249;border-top-color:#5BD18B;animation:spin .7s linear infinite}
+.ag-steps li.done::before{content:"✓";border:none;animation:none;color:#5BD18B;font-size:12px;line-height:11px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.deal{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#1E2429;border:1px solid #2C3238;border-radius:8px;padding:8px 12px;margin-bottom:6px}
+.deal b{display:block;font-size:14.5px}
+.deal small{display:block;font-family:var(--mono);font-size:11px;color:#9AA0A6}
+.deal em{font-style:normal;font-family:var(--mono);font-weight:700;font-size:15px;border-radius:5px;padding:3px 8px}
+.r1{background:rgba(229,96,77,.18);color:#F08A78}.r2{background:rgba(232,163,61,.18);color:#EDB25C}.r3{background:rgba(242,203,130,.14);color:#F2CB82}
+.reply{font-size:14.5px;color:#C7CCD2;margin-top:10px}
+.agent .hide{display:none}
+.agent .pop{animation:pop .35s ease-out both}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.ag-input{display:flex;align-items:center;gap:10px;border-top:1px solid #2C3238;padding:12px 14px}
+.ag-text{flex:1;min-height:46px;display:flex;align-items:center;flex-wrap:wrap;background:#0F1214;border:1px solid #2C3238;border-radius:10px;padding:8px 13px;font-size:15px;line-height:1.35}
+.ag-text .caret{margin-left:2px}
+.hint{color:#6F777E;margin-left:6px}
+.ag-text.typing-on .hint{display:none}
+.send{flex:none;width:40px;height:40px;border-radius:10px;background:#107C41;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;transition:transform .15s,background .15s}
+.send.press{transform:scale(.86);background:#1a9551}
+
+#agent{padding-top:18px}
+.hero-c h1{max-width:none;font-size:clamp(32px,3.6vw,46px)}
+.hero-c .cellhdr{margin-bottom:8px}
+.hero-c .agent{margin-top:18px}
+.hero-c .sub{margin-top:26px}
+.agent .ag-log{height:358px;padding:12px 16px}
+.agent .ag-steps{margin:8px 0}
+.agent .deal{padding:5px 12px;margin-bottom:5px}
+.agent .deal b{line-height:1.3}
+.agent .reply{margin-top:6px}
+.agent .ag-input{padding:9px 14px}
+@media (max-width:820px){.agent .ag-log{height:462px}}
+
+/* animated how-it-works */
+.flow{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
+.rail{position:absolute;left:12.5%;right:12.5%;top:15px;height:3px;background:var(--grid);border-radius:2px}
+.rail i{display:block;height:100%;width:0;background:var(--green);border-radius:2px;transition:width .6s ease}
+.fs{position:relative;text-align:center;opacity:.45;transition:opacity .4s}
+.fs.on,.fs.past{opacity:1}
+.dot{position:relative;z-index:1;width:33px;height:33px;margin:0 auto 14px;border-radius:50%;background:#fff;border:2px solid #C9CDD2;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:13px;color:var(--ink-3);transition:.3s}
+.fs.on .dot,.fs.past .dot{background:var(--green);border-color:var(--green);color:#fff}
+.fs.on .dot{box-shadow:0 0 0 7px var(--green-soft)}
+.fv{position:relative;height:150px;border:1px solid #C9CDD2;border-radius:10px;background:var(--gutter);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:12px;margin-bottom:12px;overflow:hidden;transition:border-color .3s,box-shadow .3s,transform .3s}
+.fs.on .fv{border-color:var(--green);box-shadow:0 14px 30px -16px rgba(16,124,65,.55);transform:translateY(-4px)}
+.fs h3{font-size:19px;margin-bottom:4px}
+.fs p{color:var(--ink-2);font-size:15.5px}
+.fs p a{text-decoration:underline;text-underline-offset:3px}
+.bubble{background:var(--green);color:#fff;border-radius:11px 11px 3px 11px;padding:7px 11px;font-size:13.5px}
+.typing{display:flex;gap:4px;align-self:flex-start;background:#fff;border:1px solid #C9CDD2;border-radius:11px;padding:8px 10px}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--ink-3)}
+.fs.on .typing i{animation:bob .9s infinite}.fs.on .typing i:nth-child(2){animation-delay:.15s}.fs.on .typing i:nth-child(3){animation-delay:.3s}
+@keyframes bob{40%{transform:translateY(-5px)}}
+.chipx,.core,.pill{font-family:var(--mono);font-size:11.5px;border-radius:5px;padding:3px 9px;background:#fff;border:1px solid #C9CDD2}
+.core{background:var(--green);color:#fff;border-color:var(--green);margin-top:6px}
+.fs.on .c1{animation:in-l .6s both}.fs.on .c2{animation:in-r .6s .15s both}.fs.on .c3{animation:in-l .6s .3s both}.fs.on .core{animation:pop .4s .75s both}
+@keyframes in-l{from{opacity:0;transform:translateX(-60px)}}
+@keyframes in-r{from{opacity:0;transform:translateX(60px)}}
+.big{font-family:var(--mono);font-weight:700;font-size:26px}
+.v-score .big{color:var(--red)}
+.lbl{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3)}
+.bar{width:80%;height:6px;background:#fff;border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;width:var(--w);background:#E58A7B;border-radius:3px}
+.fs.on .bar i{animation:grow .8s ease-out both}
+@keyframes grow{from{width:0}}
+.pill{background:var(--green);color:#fff;border-color:var(--green)}
+.pill.alt{background:#fff;color:var(--green)}
+.fs.on .v-bid .big,.fs.on .pill{animation:pop .45s both}.fs.on .pill{animation-delay:.35s}.fs.on .pill.alt{animation-delay:.6s}
+
+@media (max-width:820px){.flow{grid-template-columns:1fr;gap:26px}.rail{display:none}.ag-log{height:430px}.deal small{font-size:10.5px}}
+@media (prefers-reduced-motion:reduce){.fs{opacity:1}.agent .pop,.fs *{animation:none!important}}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:26px;border:1px solid #C9CDD2;border-radius:3px}
 .cell{padding:20px;border-right:1px solid var(--grid)}
 .cell:last-child{border-right:none}
@@ -207,32 +291,57 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
   <div class="rows" id="rows" aria-hidden="true"></div>
 
   <main>
-    <div class="blk" id="watchlist"><div class="wrap">
+    <div class="blk" id="agent"><div class="wrap hero-c">
       <div class="cellhdr">Distressed multifamily · deal sourcing</div>
       <h1>Find distress <mark>before</mark> it hits the market.</h1>
+
+      <div class="agent" id="agentbox" aria-label="Teez agent demo">
+        <div class="ag-top"><img src="teez-icon.png" alt=""> Teez agent <span class="ag-on">online</span></div>
+        <div class="ag-log">
+          <div class="msg" id="agmsg">Find me 150+ unit multifamily deals with loans maturing in the next 18 months</div>
+          <ul class="ag-steps" id="agsteps">
+            <li class="done">Reading CMBS and agency loan filings</li>
+            <li class="done">Matching tax and code records to owners</li>
+            <li class="done">Scoring 12-month distress risk</li>
+          </ul>
+          <div class="ag-res" id="agres">
+            <div class="deal"><span><b>Willowbrook Commons</b><small>Phoenix, AZ · 240 units · matures Mar 2027</small></span><em class="r1">41%</em></div>
+            <div class="deal"><span><b>Harbor Pointe Apartments</b><small>Columbus, OH · 180 units · matures Aug 2027</small></span><em class="r2">27%</em></div>
+            <div class="deal"><span><b>The Ridgeline at Mill Creek</b><small>Charlotte, NC · 312 units · matures Jan 2028</small></span><em class="r3">12%</em></div>
+            <div class="reply">Want me to underwrite these and draft outreach to the owners?</div>
+          </div>
+        </div>
+        <div class="ag-input"><div class="ag-text"><span id="agtype"></span><i class="caret" aria-hidden="true"></i><span class="hint" id="aghint">Ask Teez to find a deal…</span></div><span class="send" id="agsend" aria-hidden="true">↑</span></div>
+      </div>
       <p class="sub">Let AI do the hard work and hand off deals that are likely to close. A model, trained on past loan outcomes, estimates each multifamily asset's chance of distress from loan, tax and code signals joined to the property and owner. It shows the reasons behind every score, and where every field came from.</p>
       <div class="cta"><a class="btn" href="#early-access">Get early access</a><a class="btn btn-o" href="#how">See how it works</a></div>
-
-      <div class="xl" aria-label="Illustrative watchlist">
-        <div class="xl-bar"><span>Watchlist · multifamily 100+ units · sorted by predicted risk ▾</span><span class="ill">Showing 3 of 412 · Updated Nov 24, 2026</span></div>
-        <div class="scroll-x"><table>
-          <thead><tr><th>Asset</th><th>12-mo risk</th><th>DSCR</th><th>Maturity</th><th>Top drivers</th><th></th></tr></thead>
-          <tbody>
-            <tr><td class="asset"><b>Willowbrook Commons</b><span>240 units · Phoenix, AZ</span></td><td class="num h1c">41%</td><td class="num h2c">0.82x</td><td class="num h2c">Mar 2027</td><td class="why">Transferred to special servicing; DSCR below 1.0x; maturity inside 12 months.<i>Source: CMBS 10-D filing · verified Nov 24, 2026</i></td><td class="go">Underwrite →</td></tr>
-            <tr><td class="asset"><b>Harbor Pointe Apartments</b><span>180 units · Columbus, OH</span></td><td class="num h4c">27%</td><td class="num h3c">0.97x</td><td class="num h3c">Aug 2027</td><td class="why">Open code violations rising; property tax two cycles delinquent.<i>Source: city code records, county treasurer · verified Nov 22, 2026</i></td><td class="go">Underwrite →</td></tr>
-            <tr><td class="asset"><b>The Ridgeline at Mill Creek</b><span>312 units · Charlotte, NC</span></td><td class="num h3c">12%</td><td class="num">1.08x</td><td class="num h3c">Jan 2028</td><td class="why">Agency loan maturing in 14 months; payment status current.<i>Source: agency loan data · verified Nov 18, 2026</i></td><td class="go">Underwrite →</td></tr>
-          </tbody>
-        </table></div>
-      </div>
     </div></div>
 
     <div class="blk" id="how"><div class="wrap">
-      <h2>From a signal to a priced bid.</h2>
-      <p class="lede">Most distress tools stop at a list. Teez Live is built around what an acquisitions team does next.</p>
-      <div class="g3">
-        <div class="cell"><div class="n">=DETECT()</div><h3>Signals, joined</h3><p>Loan status, tax and code data are matched to the same parcel and owner entity, so you see one property, not five scattered records.</p></div>
-        <div class="cell"><div class="n">=PREDICT()</div><h3>A model that shows its work</h3><p>Trained on past loan outcomes to estimate each property's chance of distress, with the top drivers behind every number. No black box, nothing you can't defend to an investment committee.</p></div>
-        <div class="cell"><div class="n">=UNDERWRITE()</div><h3>Straight into underwriting</h3><p>Send a lead to <a href="https://teez.ai" style="text-decoration:underline;text-underline-offset:3px">Teez</a> and open it as a pre-filled model, so a lead becomes a priced bid in one step.</p></div>
+      <h2>How it works.</h2>
+      <p class="lede">You ask. The agent does the digging and hands you deals worth chasing.</p>
+      <div class="flow" id="flow">
+        <div class="rail" aria-hidden="true"><i id="railfill"></i></div>
+        <article class="fs">
+          <div class="dot">1</div>
+          <div class="fv v-ask"><span class="bubble">Find me deals in the Sunbelt</span><span class="typing"><i></i><i></i><i></i></span></div>
+          <h3>Ask</h3><p>Tell the agent what you buy: markets, size, timing.</p>
+        </article>
+        <article class="fs">
+          <div class="dot">2</div>
+          <div class="fv v-detect"><span class="chipx c1">Loan status</span><span class="chipx c2">Tax records</span><span class="chipx c3">Code violations</span><span class="core">1 property</span></div>
+          <h3>Detect</h3><p>Signals are joined to the same property and owner.</p>
+        </article>
+        <article class="fs">
+          <div class="dot">3</div>
+          <div class="fv v-score"><span class="big">41%</span><span class="lbl">12-month risk</span><span class="bar"><i style="--w:88%"></i></span><span class="bar"><i style="--w:62%"></i></span><span class="bar"><i style="--w:40%"></i></span></div>
+          <h3>Explain</h3><p>Every score comes with the drivers behind it.</p>
+        </article>
+        <article class="fs">
+          <div class="dot">4</div>
+          <div class="fv v-bid"><span class="lbl">Max bid</span><span class="big">$31.2M</span><span class="pill">Underwrite →</span><span class="pill alt">Draft outreach</span></div>
+          <h3>Act</h3><p>Underwrite in <a href="https://teez.ai">Teez</a> and reach the owner.</p>
+        </article>
       </div>
     </div></div>
 
@@ -353,6 +462,22 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
       </table></div></div>
     </div></div>
 
+    <div class="blk" id="watchlist"><div class="wrap">
+      <h2>Today's watchlist.</h2>
+      <p class="lede">The assets the model ranks highest, with the reasons why.</p>
+      <div class="xl" aria-label="Watchlist">
+        <div class="xl-bar"><span>Watchlist · multifamily 100+ units · sorted by predicted risk ▾</span><span class="ill">Showing 3 of 412 · Updated Nov 24, 2026</span></div>
+        <div class="scroll-x"><table>
+          <thead><tr><th>Asset</th><th>12-mo risk</th><th>DSCR</th><th>Maturity</th><th>Top drivers</th><th></th></tr></thead>
+          <tbody>
+            <tr><td class="asset"><b>Willowbrook Commons</b><span>240 units · Phoenix, AZ</span></td><td class="num h1c">41%</td><td class="num h2c">0.82x</td><td class="num h2c">Mar 2027</td><td class="why">Transferred to special servicing; DSCR below 1.0x; maturity inside 12 months.<i>Source: CMBS 10-D filing · verified Nov 24, 2026</i></td><td class="go">Underwrite →</td></tr>
+            <tr><td class="asset"><b>Harbor Pointe Apartments</b><span>180 units · Columbus, OH</span></td><td class="num h4c">27%</td><td class="num h3c">0.97x</td><td class="num h3c">Aug 2027</td><td class="why">Open code violations rising; property tax two cycles delinquent.<i>Source: city code records, county treasurer · verified Nov 22, 2026</i></td><td class="go">Underwrite →</td></tr>
+            <tr><td class="asset"><b>The Ridgeline at Mill Creek</b><span>312 units · Charlotte, NC</span></td><td class="num h3c">12%</td><td class="num">1.08x</td><td class="num h3c">Jan 2028</td><td class="why">Agency loan maturing in 14 months; payment status current.<i>Source: agency loan data · verified Nov 18, 2026</i></td><td class="go">Underwrite →</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div></div>
+
     <div class="blk" id="early-access"><div class="wrap">
       <div class="signup">
         <div>
@@ -378,7 +503,7 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
 
 <div class="bottom">
   <nav class="tabs" id="tabs">
-    <a href="#watchlist" class="act">Watchlist</a><a href="#how">How it works</a><a href="#features">Features</a><a href="#signals">Signals</a><a href="#principles">Principles</a><a href="#early-access">Early access</a>
+    <a href="#agent" class="act">Agent</a><a href="#how">How it works</a><a href="#features">Features</a><a href="#signals">Signals</a><a href="#principles">Principles</a><a href="#watchlist">Watchlist</a><a href="#early-access">Early access</a>
   </nav>
   <div class="status-bar"><span>Ready</span><span>Updated Nov 24, 2026</span></div>
 </div>
@@ -390,6 +515,44 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
   function render(s){ el.innerHTML = s.replace(/"([^"]*)"?/, '<span class="str">$&</span>').replace(/^(\w+)/, '<span class="fn">$1</span>'); }
   if (matchMedia('(prefers-reduced-motion:reduce)').matches) render(text);
   else (function tick(){ render(text.slice(0, i)); if (i++ < text.length) setTimeout(tick, 55); })();
+
+  // hero agent: type the request, send, work, answer, repeat
+  (function(){
+    if (matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+    var msg = document.getElementById('agmsg'), res = document.getElementById('agres'), typed = document.getElementById('agtype'),
+        send = document.getElementById('agsend'), steps = [].slice.call(document.querySelectorAll('#agsteps li')),
+        box = typed.parentNode, q = msg.textContent;
+    function wait(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
+    function show(el){ el.classList.remove('hide'); el.classList.add('pop'); }
+    function hide(el){ el.classList.add('hide'); el.classList.remove('pop'); }
+    async function run(){
+      for (;;) {
+        hide(msg); hide(res); steps.forEach(function(li){ hide(li); li.classList.remove('done'); }); typed.textContent = '';
+        box.classList.remove('typing-on');
+        await wait(900);
+        box.classList.add('typing-on');
+        for (var i = 1; i <= q.length; i++) { typed.textContent = q.slice(0, i); await wait(34); }
+        await wait(450);
+        send.classList.add('press'); await wait(180); send.classList.remove('press');
+        typed.textContent = ''; box.classList.remove('typing-on'); show(msg);
+        for (var k = 0; k < steps.length; k++) { await wait(250); show(steps[k]); await wait(750); steps[k].classList.add('done'); }
+        await wait(250); show(res);
+        await wait(5500);
+      }
+    }
+    run();
+  })();
+
+  // how it works: light the steps one after another while on screen
+  (function(){
+    var flow = document.getElementById('flow'), fs = [].slice.call(flow.querySelectorAll('.fs')), fill = document.getElementById('railfill'), cur = -1, timer;
+    function set(n){ cur = n; fs.forEach(function(f, k){ f.classList.toggle('on', k === n); f.classList.toggle('past', k < n); }); fill.style.width = (n / (fs.length - 1) * 100) + '%'; }
+    if (matchMedia('(prefers-reduced-motion:reduce)').matches) { fs.forEach(function(f){ f.classList.add('past'); }); fill.style.width = '100%'; return; }
+    new IntersectionObserver(function(en){
+      if (en[0].isIntersecting) { if (!timer) { set(0); timer = setInterval(function(){ set((cur + 1) % fs.length); }, 2200); } }
+      else { clearInterval(timer); timer = null; }
+    }, { threshold: 0.15 }).observe(flow);
+  })();
 
   // row-number gutter
   function rows(){
