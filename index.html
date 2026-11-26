@@ -98,7 +98,7 @@ td.ft{width:30%;font-weight:600}
 .hero-c .cellhdr{margin-bottom:8px}
 .hero-c .sub{margin:30px auto 0}
 .hero-c .cta{justify-content:center}
-.film{margin:20px auto 0;max-width:940px;aspect-ratio:16/9;border:1px solid #D5D9DE;border-radius:12px;overflow:hidden;background:#FBFBFC;box-shadow:0 18px 44px -30px rgba(31,35,41,.35)}
+.film{margin:12px auto 0;max-width:960px;aspect-ratio:16/9}
 .film.tall{max-width:400px;aspect-ratio:9/16}
 .film video{display:block;width:100%;height:100%;object-fit:cover}
 @media (max-width:640px){.film{max-width:400px;aspect-ratio:9/16}}
@@ -204,7 +204,7 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
       <div class="cellhdr">Distressed multifamily · deal sourcing</div>
       <h1>Find distress <mark>before</mark> it hits the market.</h1>
       <div class="film" id="film">
-        <video id="demo" muted loop playsinline controls preload="metadata" aria-label="How Teez finds a distressed deal, from search to booked meeting"></video>
+        <video id="demo" muted loop playsinline preload="metadata" disablepictureinpicture disableremoteplayback aria-label="How Teez finds a distressed deal, from search to booked meeting"></video>
       </div>
       <p class="sub">Let AI do the hard work and hand off deals that are likely to close. A model, trained on past loan outcomes, estimates each multifamily asset's chance of distress from loan, tax and code signals joined to the property and owner. It shows the reasons behind every score, and where every field came from.</p>
       <div class="cta"><a class="btn" href="#early-access">Get early access</a></div>
@@ -300,9 +300,12 @@ footer a{text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
   // hero video: widescreen cut on desktop, vertical cut on phones
   (function(){
     var v = document.getElementById('demo'), film = document.getElementById('film');
-    var phone = matchMedia('(max-width:640px)').matches, name = phone ? 'teez-vertical' : 'teez-wide';
+    var phone = matchMedia('(max-width:640px)').matches, name = phone ? 'teez-web-vertical' : 'teez-web-wide';
     film.classList.toggle('tall', phone);
     v.poster = name + '.jpg'; v.src = name + '.mp4'; v.muted = true;
+    function play(){ var p = v.play(); if (p) p.catch(function(){}); }
+    // no controls: a click or tap pauses and resumes (also starts it if autoplay is blocked)
+    v.addEventListener('click', function(){ if (v.paused) play(); else v.pause(); });
     if (matchMedia('(prefers-reduced-motion:reduce)').matches) return;
     new IntersectionObserver(function(en){
       if (en[0].isIntersecting) { var p = v.play(); if (p) p.catch(function(){}); } else v.pause();
